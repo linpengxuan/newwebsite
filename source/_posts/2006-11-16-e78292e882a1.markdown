@@ -1,0 +1,15 @@
+---
+author: linpx
+date: '2006-11-16 07:26:16'
+layout: post
+slug: '%e7%82%92%e8%82%a1'
+status: publish
+comments: true
+title: 炒股
+wordpress_id: '119'
+categories:
+- job
+---
+
+这一周炒股挣了些钱。小现一下。
+

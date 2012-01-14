@@ -1,0 +1,13 @@
+---
+author: sourrabbit
+date: '2010-01-13 12:13:21'
+layout: post
+slug: test-2
+status: publish
+comments: true
+title: test
+wordpress_id: '537'
+---
+
+忽然发现wordpress可以自由登陆了，一瞬间感觉很不习惯，改用winlive writer做客户端，以资测试。
+
