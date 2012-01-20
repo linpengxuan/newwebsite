@@ -19,7 +19,7 @@ http://twitter.com/lucifr)交流后，发现[@masukomi](http://twitter.com/masuk
 
 这篇文章适用于在自己域名上布置的octopuses博客，只需`rake
 generate`就能在nginx上完全反映出内容的变化。如果是用github的朋友，还需多加上`rake deploy`和相应的`git
-commit`。实际上从我之前所写的`Octopress博客从零开始`出发，到这篇文章为止，是可以做到零脑损建立octopress博客的。<!--more-->
+commit`。实际上从我之前所写的[Octopress博客从零开始](http://www.colors4.us/blog/2012/01/08/octopressbo-ke-cong-ling-kai-shi-i)出发，到这篇文章为止，是可以做到零脑损建立octopress博客的。<!--more-->
 
 和原来发布方式有个不同的地方是，原来的博文地址都是中文拼音，这次更给力，地址用上中文了。另外，在windows远程登录ssh设置时看到的都是乱码，实际上不影响的，换台mac，就没有问题。
 
@@ -84,39 +84,35 @@ xxx.rb可以，但是在cron下是不行的，因为没有定义rubi环境。这
 {% codeblock %}
 * * * * * /bin/echo "check if cron works" >> /home/wwwroot/1.log
 #此命令为每隔一分钟写入log文件，目的用于测试cron是否正常工作，确认后可直接删除。
-* * * * * cd /home/wwwroot/jekyllmail && ./run_jekyllmail.sh
+*/5 * * * * cd /home/wwwroot/jekyllmail && ./run_jekyllmail.sh
 #每隔5分钟登录检查邮箱，是否有博文，强迫症轻度患者建议改为每一分钟。
-* */2 * * * cd /home/wwwroot/jekyllmail && ./build_site.sh   #每隔2小时做一次rake
-generate
+* */2 * * * cd /home/wwwroot/jekyllmail && ./build_site.sh   #每隔2小时做一次rake generate
 {% endcodeblock %}
-cron运行时时不带环境的，所以我们必须在`jekyllmail`下的两个文件定义环境。设定如下：
-{% codeblock run_jekyllmail.sh %}
+cron运行时时不带环境的，所以我们必须在`jekyllmail`下的两个文件`run_jekyllmail.sh`和`build_site.sh`定义环境。分别设定如下：
+
+{% codeblock %}
+
 #!/bin/sh
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load
-RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 export LANG=en_US.UTF-8
 export GEM_HOME=/usr/local/rvm/gems/ruby-1.9.2-p290
-export
-GEM_PATH=/usr/local/rvm/gems/ruby-1.9.2-p290:/usr/local/rvm/gems/ruby-1.9.2-p290@global
-export
-PATH=/usr/local/rvm/gems/ruby-1.9.2-p290/bin:/usr/local/rvm/gems/ruby-1.9.2-p290@global/bin:/usr/local/rvm/rubies/ruby-1.9.2-p290/bin:/usr/local/rvm/bin:$PATH
-#各机子环境有所不同，确认后代入
+export GEM_PATH=/usr/local/rvm/gems/ruby-1.9.2-p290:/usr/local/rvm/gems/ruby-1.9.2-p290@global
+export PATH=/usr/local/rvm/gems/ruby-1.9.2-p290/bin:/usr/local/rvm/gems/ruby-1.9.2-p290@global/bin:/usr/local/rvm/rubies/ruby-1.9.2-p290/bin:/usr/local/rvm/bin:$PATH #各机子环境有所不同，确认后代入
 
 bundle exec ruby jekyllmail.rb
 {% endcodeblock %}
-以及{% codeblock build_site.sh %}
+
+以及
+
+{% codeblock %}
 #!/bin/sh
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load
-RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 export LANG=en_US.UTF-8
 export GEM_HOME=/usr/local/rvm/gems/ruby-1.9.2-p290
-export
-GEM_PATH=/usr/local/rvm/gems/ruby-1.9.2-p290:/usr/local/rvm/gems/ruby-1.9.2-p290@global
-export
-PATH=/usr/local/rvm/gems/ruby-1.9.2-p290/bin:/usr/local/rvm/gems/ruby-1.9.2-p290@global
-/bin:/usr/local/rvm/rubies/ruby-1.9.2-p290/bin:/usr/local/rvm/bin:$PATH
+export GEM_PATH=/usr/local/rvm/gems/ruby-1.9.2-p290:/usr/local/rvm/gems/ruby-1.9.2-p290@global
+export PATH=/usr/local/rvm/gems/ruby-1.9.2-p290/bin:/usr/local/rvm/gems/ruby-1.9.2-p290@global/bin:/usr/local/rvm/rubies/ruby-1.9.2-p290/bin:/usr/local/rvm/bin:$PATH
 
 cd /home/wwwroot/blog/ ＃你的octopuses文件夹目录
 bundle exec rake generate
@@ -124,11 +120,10 @@ bundle exec rake generate
 
 通过cron定时进行`rake generate`必须补充一下，如果你的网页是放在github上，还需来个`rake deploy`。
 ####暂时结语
-上述方法不是最优的，其实我希望可以做到[@masukomi](http://twitter.com/masukomi)所写的[ServingOctopress
-From a Self-hosted Git Repository](
+上述方法不是最优的，其实我希望可以做到[@masukomi](http://twitter.com/masukomi)所写的[Serving Octopress From a Self-hosted Git Repository](
 http://weblog.masukomi.org/2011/12/19/serving-octopress-from-a-self-hosted-git-repository/)
 （中文版可参考[@lucifr](http://twitter.com/lucifr)所写博客[服务器端 Octopress 搭建及移动方案](
 http://lucifr.com/2011/12/21/octopress-on-server-and-portable-scheme/)),文中的新博客文章放到特定文件夹后会主动触发`rake
 generate`，在我看来，这远比用cron被动，反复rake来的即时和漂亮。我在做测试时，失败了，我会在以后继续跟进这个方向，有新的进展，肯定贴出。
 
-同时欢迎大伙在下面评论中留下各种问题，只要我知道的，会非常乐意交流。
+博客整到现在还是很开心的。学到东西了，还能留下文字，如果帮助到大伙就更好了。这就是交流的好处吧。欢迎大伙在下面评论中留下各种问题，只要我知道的，会非常乐意交流。
