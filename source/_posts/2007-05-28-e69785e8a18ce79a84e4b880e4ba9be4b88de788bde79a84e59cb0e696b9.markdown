@@ -7,8 +7,7 @@ status: publish
 comments: true
 title: 旅行的一些不爽的地方
 wordpress_id: '66'
-categories:
-- 旅游
+categories: travel
 ---
 
 应土人的要求，慢慢更新。原因是最近上网机会不多，现在已在香港打工，租的房间只有一张床，想写东西只能在上班空余时偷偷来。

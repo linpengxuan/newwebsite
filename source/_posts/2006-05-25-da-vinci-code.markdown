@@ -8,7 +8,6 @@ comments: true
 title: Da Vinci Code
 wordpress_id: '156'
 categories:
-- video blog
 ---
 
 最近极为流行达芬奇密码，在网上找到此video，一起欣赏大家。

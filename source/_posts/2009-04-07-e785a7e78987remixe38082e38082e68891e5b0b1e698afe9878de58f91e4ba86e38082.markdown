@@ -7,8 +7,7 @@ status: publish
 comments: true
 title: 照片remix。。我就是重发了。
 wordpress_id: '8'
-categories:
-- 旅游
+categories: travel
 ---
 
 今天突发奇想又ps了几张照片。这是路上的景色，哈哈。。。大家都来捧场吧，不然我的博客会死的

@@ -8,7 +8,7 @@ comments: true
 title: confession of Economy Hit Man
 wordpress_id: '219'
 categories:
-- reading time
+- reading
 ---
 
 @page {size:21cm 29.7cm;margin:2cm;} P {margin-bottom:0.21cm;}

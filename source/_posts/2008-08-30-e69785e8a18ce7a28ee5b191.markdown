@@ -7,8 +7,7 @@ status: publish
 comments: true
 title: 旅行碎屑
 wordpress_id: '18'
-categories:
-- 旅游
+categories: travel
 ---
 
 嗯，一直没有贴图是因为，最近打算学学PS照片，加工完之后再把照片贴出来，这是我其中拍得一张，同上一篇拍的一个人。

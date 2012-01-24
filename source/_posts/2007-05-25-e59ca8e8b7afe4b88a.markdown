@@ -7,8 +7,7 @@ status: publish
 comments: true
 title: 在路上
 wordpress_id: '67'
-categories:
-- 旅游
+categories: travel
 ---
 
 在路上，on the road， 是我路上结识一同伴带的一本书的名字。关于个人追求自己理想的书，写得很晦涩，不过用来给我当题目很不错。

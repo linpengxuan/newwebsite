@@ -7,8 +7,7 @@ status: publish
 comments: true
 title: 我爱拍照
 wordpress_id: '57'
-categories:
-- 旅游
+categories: travel
 ---
 
 ![](http://farm1.static.flickr.com/214/522425944_4eb5590609.jpg?v=0)

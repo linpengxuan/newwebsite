@@ -8,7 +8,7 @@ comments: true
 title: 一些小书
 wordpress_id: '170'
 categories:
-- reading time
+- reading
 ---
 
 最近读些闲书。 方平的

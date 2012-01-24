@@ -8,7 +8,6 @@ comments: true
 title: 保定下雪
 wordpress_id: '11'
 categories:
-- ShoZu
 ---
 
 [![](http://media.shozu.com/cache/portal/media/5babb1e/16777226_blog)](http://

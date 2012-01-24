@@ -6,9 +6,7 @@ slug: flash-lighting
 status: publish
 comments: true
 title: flash lighting
-wordpress_id: '202'
-categories:
-- sudden thought
+categories: thoughts
 ---
 
 I am prond to annouce a newly opened colume, sudden thought. in this section,

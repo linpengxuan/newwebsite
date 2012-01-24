@@ -8,7 +8,7 @@ comments: true
 title: sth about wireless download
 wordpress_id: '210'
 categories:
-- lpx.linux.computer
+- computer
 ---
 
 the peak rate for downloading in my dorm reached 400kb, by using BT. that

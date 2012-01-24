@@ -7,8 +7,7 @@ status: publish
 comments: true
 title: trip in Sichuan
 wordpress_id: '117'
-categories:
-- 旅游
+categories: travel
 ---
 
 余驰同学接待了我，我到四川的首日。

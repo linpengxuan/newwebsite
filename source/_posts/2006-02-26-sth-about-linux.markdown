@@ -8,7 +8,7 @@ comments: true
 title: sth about linux
 wordpress_id: '203'
 categories:
-- lpx.linux.computer
+- computer
 ---
 
 all these days I have been using Linux. for me, it is already overcome windows

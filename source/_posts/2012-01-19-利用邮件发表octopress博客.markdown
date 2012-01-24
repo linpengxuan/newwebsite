@@ -57,8 +57,7 @@ gmail，确认设置中已经打开了pop3支持和utf-8发送。
 https://github.com/masukomi/JekyllMail):
 
 {% codeblock %}
-这里是博文的题目中文亦可 || secret: 123! / author: linpx / categories: test ok /
-comments: true      #categories这里很特殊，各种目直接用空格隔开就行了，不要添逗号
+这里是博文的题目中文亦可 || secret: 123! / author: linpx / categories: test ok /comments: true      #categories这里很特殊，各种目直接用空格隔开就行了，不要添逗号
 {% endcodeblock %}
 
 邮件的内容直接拷入已经写好的markdown格式的文章即可。我建议书写格式去除`rich formatting`，改用`plain text` (这是
@@ -82,10 +81,8 @@ xxx.rb可以，但是在cron下是不行的，因为没有定义rubi环境。这
 我直接给出我可以用的设置，修改文件夹位置后，引用即可。输入`crontab
 -e`,加到最后一行。内容中涉及到`gem`和`rvw`的地址，用`which gem`和`which rvm`来确定。
 {% codeblock %}
-* * * * * /bin/echo "check if cron works" >> /home/wwwroot/1.log
-#此命令为每隔一分钟写入log文件，目的用于测试cron是否正常工作，确认后可直接删除。
-*/5 * * * * cd /home/wwwroot/jekyllmail && ./run_jekyllmail.sh
-#每隔5分钟登录检查邮箱，是否有博文，强迫症轻度患者建议改为每一分钟。
+* * * * * /bin/echo "check if cron works" >> /home/wwwroot/1.log #此命令为每隔一分钟写入log文件，目的用于测试cron是否正常工作，确认后可直接删除。
+*/5 * * * * cd /home/wwwroot/jekyllmail && ./run_jekyllmail.sh #每隔5分钟登录检查邮箱，是否有博文，强迫症轻度患者建议改为每一分钟。
 * */2 * * * cd /home/wwwroot/jekyllmail && ./build_site.sh   #每隔2小时做一次rake generate
 {% endcodeblock %}
 cron运行时时不带环境的，所以我们必须在`jekyllmail`下的两个文件`run_jekyllmail.sh`和`build_site.sh`定义环境。分别设定如下：
@@ -126,4 +123,6 @@ http://weblog.masukomi.org/2011/12/19/serving-octopress-from-a-self-hosted-git-r
 http://lucifr.com/2011/12/21/octopress-on-server-and-portable-scheme/)),文中的新博客文章放到特定文件夹后会主动触发`rake
 generate`，在我看来，这远比用cron被动，反复rake来的即时和漂亮。我在做测试时，失败了，我会在以后继续跟进这个方向，有新的进展，肯定贴出。
 
-博客整到现在还是很开心的。学到东西了，还能留下文字，如果帮助到大伙就更好了。这就是交流的好处吧。欢迎大伙在下面评论中留下各种问题，只要我知道的，会非常乐意交流。
+如果对octopress这么多命令行没啥把握的话，不用怕。知难而上，做出来才爽啊。很多时候，在执行命令的时候，就直接给提示哪儿出错了。我们需要做得就是把错误信息google一下就行啦。因为出现的错误，肯定在别人处出现过，也肯定被解决过。而在寻找解决方法的过程，本身就是一种学习。另外，得有发散思维，一条程序线下来，出错了，有多种可能性，写下来，一个个设计试验来确定是否出错，排除。
+
+博客整到现在还是很开心的。学到东西了，还能留下文字，如果帮助到大伙就更好了。这就是交流的好处吧。欢迎大伙在下面评论中留下各种问题，只要我知道的，会非常乐意互相沟通。

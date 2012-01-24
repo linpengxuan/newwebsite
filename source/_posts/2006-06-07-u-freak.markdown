@@ -8,7 +8,7 @@ comments: true
 title: u freak?
 wordpress_id: '146'
 categories:
-- reading time
+- reading 
 ---
 
 tired of preparing my bar, not wanting to keep wasting my time either, I

@@ -7,8 +7,7 @@ status: publish
 comments: true
 title: some tips how to be rich
 wordpress_id: '204'
-categories:
-- 图书
+categories: reading
 ---
 
 I read a new book from Robert Kiyosaki, authar of poor dad, rich dad. name is

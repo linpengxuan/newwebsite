@@ -8,7 +8,7 @@ comments: true
 title: easy your computer
 wordpress_id: '198'
 categories:
-- lpx.computer
+- computer
 ---
 
 I will open a new column, try to share the experience I gained from using

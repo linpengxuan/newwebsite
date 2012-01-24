@@ -8,7 +8,7 @@ comments: true
 title: 我们一直在DIY
 wordpress_id: '217'
 categories:
-- lpx.linux.computer
+- computer
 ---
 
 @page {size:21cm 29.7cm;margin:2cm;} P {margin-bottom:0.21cm;}

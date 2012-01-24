@@ -8,7 +8,7 @@ comments: true
 title: easy computer tip III
 wordpress_id: '187'
 categories:
-- lpx.computer
+- computer
 ---
 
 go to [www.pandora.com](http://www.pandora.com) for the online music playing.

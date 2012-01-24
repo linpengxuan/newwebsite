@@ -8,7 +8,6 @@ comments: true
 title: Funny video blog
 wordpress_id: '231'
 categories:
-- video blog
 ---
 
 I am so hornored to announce that I have started my video blog on MSN space.

@@ -8,7 +8,7 @@ comments: true
 title: 观nanta
 wordpress_id: '10'
 categories:
-- Travel
+- travel
 ---
 
 我不合适写记叙抒情的文章，仅是把我记下的一些小内容贴上。

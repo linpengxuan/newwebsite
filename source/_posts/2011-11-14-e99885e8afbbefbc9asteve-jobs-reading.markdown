@@ -10,7 +10,6 @@ wordpress_id: '474'
 categories:
 - life
 - reading
-- reading time
 ---
 
 1. 看完了乔布斯传。

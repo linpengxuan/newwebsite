@@ -7,8 +7,7 @@ status: publish
 comments: true
 title: 旅行小记，我在云南的流水帐
 wordpress_id: '19'
-categories:
-- 旅游
+categories: travel
 ---
 
   

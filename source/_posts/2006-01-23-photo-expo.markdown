@@ -8,7 +8,7 @@ comments: true
 title: Photo ExPo
 wordpress_id: '238'
 categories:
-- classic moment
+- photo
 ---
 
 1. following one is taken in some chateau whose name means nothing to me. I

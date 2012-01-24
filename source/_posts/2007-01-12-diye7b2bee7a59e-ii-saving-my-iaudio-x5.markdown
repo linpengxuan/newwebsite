@@ -8,7 +8,7 @@ comments: true
 title: DIY精神 II---saving my iAudio X5
 wordpress_id: '110'
 categories:
-- lpx.computer
+- computer
 ---
 
 任何人有过硬盘mp3都会产生这样的感觉，在使用超过一年后，电池已经没有力气了。对我来说，我的iAudio X5已经处于半瘫痪状态，没有电源就是shit。但是

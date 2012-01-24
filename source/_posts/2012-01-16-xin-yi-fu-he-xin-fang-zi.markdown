@@ -4,7 +4,7 @@ title: "新衣服和新房子"
 date: 2012-01-16 02:51
 comments: true
 author: sourrabbit
-categories: Korea life
+categories: korea life
 ---
 周一上班。今天穿了新衣服，配了一条很久没戴过的链子。链子还是当年住在香港时和sam一起买的，几年下来，能找到的只有两条了，sam也很久没见了。说到这里似乎应该发一下时光如流水、物是人已非之类的文青感慨，但其实跑题前的point是，穿新衣服的心情过于兴奋黑色真显瘦！导致出门忘记戴围巾和手套，被风吹了个透心凉，现在还在流鼻涕。<!--more-->
 

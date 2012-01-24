@@ -8,7 +8,7 @@ comments: true
 title: easy your computer--using Flickr
 wordpress_id: '195'
 categories:
-- lpx.computer
+- computer
 ---
 
 Easy your computer
