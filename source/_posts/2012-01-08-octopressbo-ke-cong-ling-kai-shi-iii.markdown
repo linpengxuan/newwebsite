@@ -137,3 +137,10 @@ Octopress虽然号称是黑客博客工具，但是有时候用图形化界面�
 *	可以设`rknp`为`cd ~/blog; rake new_post["%fill:title%"]; vi ./source/_posts/%Y-%m-%d-*.markdown`。
 *	可以设`rkgr`为`cd ~/blog; rake generate; rake deploy`
 *	其实发挥想象力的话，你可以在vps服务器上设立dropbox文件夹，把预设`public`置入同步文件夹内，我们在本地上用Mou或Byword书写，本地Dropbox存盘，本地rake generate。然后那儿就直接被更新了。这个只是想法，还没有被测试过，以后来整。
+
+####给网站添加访问分析 Google Analytics
+我在看了这个[网页](http://www.whatwherewhy.me/colophon/)后，发现我还可以添加网站分析，毕竟是自己努力出来的东西，看看大伙是否有兴趣访问还是不错的，不过很多情况是远逊于预期。:)
+
+1. 先于[Google Analytics](https://www.google.com/analytics)开通和自己网站相关的服务，比如登记自己的网址，取得GA的Track ID，应该如该样式`UA-28584XXX-X`.
+1. 修改`_config.yml`最后部分，将ID置于`google_analytics_tracking_id:`项目之后，rake一下就行了。
+1. 之后进入GA网站看report吧，你就会知道何时多少人访问过你的网站。
