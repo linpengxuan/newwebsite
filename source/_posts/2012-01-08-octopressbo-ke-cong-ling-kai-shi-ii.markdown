@@ -4,7 +4,7 @@ title: "Octopress博客从零开始 II"
 date: 2012-01-08 08:13
 comments: true
 author: linpx
-categories: vps octopress computer
+categories: octopress computer
 ---
 现在开始进行下一步**octopress的安装**。
 

@@ -4,7 +4,7 @@ title: "Octopress博客从零开始 III"
 date: 2012-01-08 08:22
 comments: true
 author: linpx
-categories: vps octopress computer
+categories: octopress computer
 ---
 其实现在已经可以开博了，不过如果进行一些个性化博客格式的调整，也就会让你自己的页面出彩些，对我来说，就是有些小爽了。<!--more-->
 

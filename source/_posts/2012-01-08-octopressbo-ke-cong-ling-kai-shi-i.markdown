@@ -4,7 +4,7 @@ title: "Octopress博客从零开始 I"
 date: 2012-01-08 07:45
 comments: true
 author: linpx
-categories: vps octopress computer
+categories: octopress computer
 ---
 本文的写作原则是以我这个没有学过程序的文科同学为基础，所以会有很多其他哥们看了觉得没事，可在我这就得想破脑袋才能整出来的(呵呵，擦汗)。写这篇文章的两个原因是，向别人分享我安装这个的经验，减少无用功；以及可以让我以后在更换服务器的时候，不用浪费太多时间在我曾经做成过的东西。这次的策略是，我只打算用vps上的octopress来更新博客，简单些，应该好些。放在vps上更新的好处是，换了电脑也能更新博客，只要有ssh软件的话。<!--more-->
 

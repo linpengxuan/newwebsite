@@ -2,7 +2,7 @@
 title: 'Words written on Dec 29 of this Lunar Rabbit Year'
 date: 2012-01-21 13:00:07
 author: linpx
-categories: life thoughts scribble
+categories: life thoughts
 comments: true
 layout: post
 markup: markdown

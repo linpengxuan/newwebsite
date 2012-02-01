@@ -10,8 +10,7 @@ published: true
 ---
 以前过春节的时候，会非常期待。
 
-{% img right http://farm8.staticflickr.com/7149/6764103545_fc05e62c2d_z.jpg214
-240 fu_char %}
+{% img right http://farm8.staticflickr.com/7149/6764103545_fc05e62c2d_z.jpg 214 240 fu_char %}
 
 压岁钱超多，小时候每年基本不要零用钱，过年收的精打细算总是能刚好花上一年。我记得做过一个chart，标记上每年压岁钱的额度，于是就出来了一个斜率有45度的向上曲线。这待遇最终传给我妹妹，从二零某几年开始，在刚刚hit到万元大关后，我就收不到压岁钱了。
 
@@ -26,3 +25,7 @@ published: true
 春节有如例行公事般，公司配合，到这个时节催促我们请多两天假，我们照例无视狂涨的机票价格，将平常待的地方挪个窝，过着衣来伸手饭来张口的神仙日子。我心里知道不对，该做些什么，却无从下手。也许改变应该从下个春节做起，比如在地球某个角落facetime给家里拜年。我考虑过，只是这次还真来不及，去澳洲机票不对头，去台湾签证来不及。春节还是老样子，看现在的小孩的兴奋感，自己也曾走过来，现在人变了，没错，很明显的是人变胖了，感觉也就跟着变了。我的心态变了。已经开始自认有轻微抑郁症的人最近被朋友笑称也有强迫症，心态上已经完全。。。跟不上节奏，最重要的体现是对太多东西无所谓，大约中学阶段那几句对自己不停重复的话已经开始结果了，“不以物喜，不以己悲”；“无欲则刚”。就连春节都不期待，对和父母见面不期待，对购物没兴趣。我必须培养出兴趣，在无聊完全吞噬我之前。必须。
 
 又是乱写了些文字，还是那句老话，博客基本是自言自语，也没打算坐到多少的PV，只是给自己一个素材，这样老了后还能看看，有点乐子，或是多些写回忆录的素材。
+
+很开心这次老范全家过来厦门过年。他们家小狗精力旺盛，在过年期间，给我们留下了深刻的印象。
+
+<iframe src="http://player.vimeo.com/video/35949088?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p><a href="http://vimeo.com/35949088">flirting dogs</a> from <a href="http://vimeo.com/linpx">Pengxuan Lin</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
