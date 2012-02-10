@@ -24,7 +24,7 @@ http://colors4.us) along with my wife.
 * Get a job for wife. Serendipity.
 * Finally to receive my PHD degree, taking one year and a half more time,
 expecting all the paperwork be done in coming two months.
-<!--more-->
+* We got baptized.<!--more-->
 
 ####some thoughts
 The good thing is I have plans, the bad thing is plenty of them. Certainly
