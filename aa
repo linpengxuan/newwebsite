@@ -1,4 +1,6 @@
 #!/bin/sh
+cd /home/wwwroot/jekyllmail
+ruby jekyllmail.rb
 cd /home/wwwroot/blog
 git add .
 git commit -m "aa"
