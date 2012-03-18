@@ -1,5 +1,7 @@
 #!/bin/sh
 cd /home/wwwroot/jekyllmail
+export LC_CTYPE=en_US.UTF-8
+export LANG=en_US.UTF-8
 ruby jekyllmail.rb
 cd /home/wwwroot/blog
 git add .
