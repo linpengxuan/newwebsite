@@ -4,7 +4,7 @@
 
 url: http://colors4.us
 title: sourrabbit & linpx 
-subtitle: blog for the colors in our life
+subtitle: a blog for the colors in our life.
 author: Dong Ping; Lin Pengxuan
 simple_search: http://google.com/search
 description:
@@ -50,7 +50,7 @@ default_asides: [asides/about.html, asides/recent_posts.html, asides/github.html
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
 #blog_index_asides: [ asides/recent_posts.html, asides/twitter.html]
-post_asides: [ asides/recent_posts.html, asides/twitter.html, asides/categories.html] 
+post_asides: [ asides/about.html, asides/recent_posts.html, asides/twitter.html, asides/categories.html] 
 # page_asides:
 
 # ----------------------- #
