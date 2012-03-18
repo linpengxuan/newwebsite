@@ -1,6 +1,6 @@
 ---
 title: '更换服务器后的Octopress设置'
-date: 2012-03-18 17:39:03
+date: 2012-03-18 18:02:46
 author: linpx
 categories: computer octopress
 comments: true
@@ -59,7 +59,8 @@ cd blog
 git init
 git remote add origin.old git://github.com/linpengxuan/blog.git
 git pull origin.old master
-git remote add origin git://github.com/linpengxuan/xinboke.git
+git remote add origin git@github.com:linpengxuan/xinboke.git ＃需要新建
+git remote add live /home/wwwroot/octopress_blog.git; git pull live master;
 git add .;git commit -m "aa";git push origin master
 #设置VPS端的另一个octopress环境，用于自动rake generate
 cd /home/wwwroot
