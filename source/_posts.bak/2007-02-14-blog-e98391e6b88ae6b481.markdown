@@ -1,0 +1,13 @@
+---
+author: linpx
+date: '2007-02-14 09:29:33'
+layout: post
+slug: blog-%e9%83%91%e6%b8%8a%e6%b4%81
+status: publish
+comments: true
+title: Blog 郑渊洁
+wordpress_id: '96'
+---
+
+今天看到郑渊洁的blog，起了个名字叫郑渊洁勃客。哈哈，不禁莞尔。
+
