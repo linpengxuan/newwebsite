@@ -1,0 +1,5 @@
+#!/bin/sh
+cd /home/wwwroot/blog
+git add .
+git commit -m "aa"
+git push live master
