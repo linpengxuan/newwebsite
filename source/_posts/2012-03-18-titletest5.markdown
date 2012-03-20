@@ -1,7 +1,0 @@
----
-layout: post
-title: "titletest5"
-date: 2012-03-18 11:41
-comments: true
-categories: 
----
