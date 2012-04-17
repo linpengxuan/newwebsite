@@ -1,6 +1,6 @@
 ---
 title: 'test'
-date: 2012-04-17 15:27:53
+date: 2012-04-17 15:30:44
 author: linpx
 categories: octopress computer
 comments: true
@@ -8,5 +8,13 @@ layout: post
 markup: markdown
 published: true
 ---
+---------- Forwarded message ----------
+From: Lin Pengxuan <linpengxuan@gmail.com>
+Date: Tue, Apr 17, 2012 at 4:22 PM
+Subject: test || secret: abcd1234 / author: linpx / categories: octopress
+computer / comments: true
+To: Penny Lin <jmail2octo@gmail.com>
+
+
 aa
 ##a
