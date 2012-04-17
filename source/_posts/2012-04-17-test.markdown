@@ -1,0 +1,12 @@
+---
+title: 'test'
+date: 2012-04-17 15:27:53
+author: linpx
+categories: octopress computer
+comments: true
+layout: post
+markup: markdown
+published: true
+---
+aa
+##a
