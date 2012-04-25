@@ -28,3 +28,7 @@ number。直到今天4月25日为止，还未收到解锁邮件。疯了。4月2
 card放出解锁芯片，需要49美元。唯一反应就是，嘿，你早干嘛去了。
 
 对苹果感觉很好，别人问买啥电脑，我也只推荐这个。确实不错。
+
+注：回家后我装上了这个wifi usb，非常好用，几乎零配置。芯片是Realtek RTL8188CU, OS X下的[驱动](http://www.wireless-driver.com/airlink101-awll5088-wireless-windows-macos-driver-utility/)在此，支持最新的Lion。最后送上一张电脑截图。基本上电脑就是全新配置了，屏幕非常亮，网络也稳定。哈哈哈。我得考虑下是不是真需要再买一台MBP了。
+
+![](http://farm6.staticflickr.com/5197/7112341205_3e5238ca89_b.jpg)
