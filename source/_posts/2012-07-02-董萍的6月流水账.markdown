@@ -1,5 +1,5 @@
 ---
-title: '董萍的6月流水账'
+title: '林太太6月流水账'
 date: 2012-07-02 12:09:38
 author: sourrabbit
 categories: life xp
@@ -8,6 +8,8 @@ layout: post
 markup: markdown
 published: true
 ---
+![](http://farm8.staticflickr.com/7271/7484290754_5372792dc0_n.jpg)
+
 很久没更新了，林先生不停刷屏，其实我做的事也不少，就是犯懒。大半辈子写日记都是这样，一阵子就积极地每天都更新，恨不得吃顿饭也写下来，再一阵子又懒筋抽搐，一个字也懒得写。
 
 

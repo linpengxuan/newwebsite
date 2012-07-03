@@ -2,7 +2,7 @@
 title: '考试结束的晚上无聊就写点内容吧'
 date: 2012-06-03 21:54:07
 author: linpx
-categories: octopress computer
+categories: life xp
 comments: true
 layout: post
 markup: markdown
