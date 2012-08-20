@@ -19,24 +19,17 @@ allowfullscreen></iframe>
 故事就不多说了，2004年的老片没看过的人不多。但是必须看到，[小说](http://en.wikipedia.org/wiki/I,_Robot)
 原著出版的时间是1950年，这点就足够吊我们的胃口了。多厉害的想象力，把50多年后的我们硬是看得一愣一愣的。也不用多提作者阿西莫夫的机器人三大定律，不知道被多少科幻作品套用。到最后，反倒是知道这个的比了解作者的还多。影片一开头就强调了这个前提，也是故事展开的基础。
 
-{% blockquote [Isaac Asimov] [
-http://en.wikipedia.org/wiki/Three_Laws_of_Robotics] [Three Laws of
-Robotics] %}
-A robot may not injure a human being or, through inaction, allow a human
-being to come to harm.
-A robot must obey the orders given to it by human beings, except where such
-orders would conflict with the First Law.
-A robot must protect its own existence as long as such protection does not
-conflict with the First or Second Laws.
+{% blockquote Isaac Asimov http://en.wikipedia.org/wiki/Three_Laws_of_Robotics Three Laws of Robotics %}
+1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.
+2. A robot must obey the orders given to it by human beings, except where such orders would conflict with the First Law.
+3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Laws.
 {% endblockquote %}
 
 另外，一个非常吸引我的地方是影片中机器人的设计，实在是神作。优雅而美丽，有种第一次看到乔布斯出场介绍iPhone4的感觉（是的，前3代iPhone都无法如此吸引我）。然后再看上一段最后半小时机器人互殴的情景，直接醉倒。
 
-{% img center http://farm8.staticflickr.com/7248/7812896806_1a595d51cd_b.jpg503
-755 机器人_1 %}
+{% img center http://farm8.staticflickr.com/7248/7812896806_1a595d51cd_b.jpg 503 755 机器人_1 %}
 
-{% img center http://farm9.staticflickr.com/8421/7812896876_62b3337cea_b.jpg535
-716 机器人_2 %}
+{% img center http://farm9.staticflickr.com/8421/7812896876_62b3337cea_b.jpg 535 716 机器人_2 %}
 
 我有种怪癖，角色扮演。比如看电影过程中，把自己扮演成某种来自某个年代的人，以他们的角度来观看的话，又会产生何种享受。本片结尾音乐有种碟战类型，耍阴谋的电子音乐，鼓点也很强烈，节奏快，我就想如果我是战国时候的国王，听到这样的音乐会是何种心情，很有趣。
 
