@@ -4,6 +4,4 @@ export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 ruby jekyllmail.rb
 cd /home/wwwroot/blog
-git add .
-git commit -m "aa"
-git push live master
+bundle exec rake generate
