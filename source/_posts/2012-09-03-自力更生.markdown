@@ -1,6 +1,6 @@
 ---
 title: 'è‡ªåŠ›æ›´ç”Ÿ'
-date: 2012-09-03 19:52:50
+date: 2012-09-03 20:14:08
 author: sourrabbit
 categories: life rabbit korea
 comments: true
@@ -8,20 +8,10 @@ layout: post
 markup: markdown
 published: true
 ---
-×Ô¼º·¢²©¿ÍºÍÍ¼Æ¬¡£
+è‡ªå·±å‘åšå®¢å’Œå›¾ç‰‡ã€‚
 
-ÁÖÏÈÉúÕâ¸öÖĞ¼äÈË¿ÉÒÔÏÂ¸ÚÁË¡£
+æ—å…ˆç”Ÿè¿™ä¸ªä¸­é—´äººå¯ä»¥ä¸‹å²—äº†ã€‚
 
-²Ù×÷Ğ¡ºÚ´°¿ÚµÄÊ±ºò£¬yyÁËÒ»ÏÂ×Ô¼ºÊÇ¸ö´óÅ£¼¼ÊõÈËÔ±¡£
+æ“ä½œå°é»‘çª—å£çš„æ—¶å€™ï¼Œyyäº†ä¸€ä¸‹è‡ªå·±æ˜¯ä¸ªå¤§ç‰›æŠ€æœ¯äººå‘˜ã€‚
 
-
-
-![](*http://farm9.staticflickr.com/8306/7920800546_6c2156fbc1.jpg*)
-
-
-
-
--- 
-Yours Sincerely
-
-Dong Ping
+![](http://farm9.staticflickr.com/8306/7920800546_6c2156fbc1.jpg)
