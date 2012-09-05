@@ -1,0 +1,15 @@
+---
+author: linpx
+date: '2006-03-28 11:00:50'
+layout: post
+slug: fun
+status: publish
+comments: true
+title: fun
+wordpress_id: '174'
+categories:
+- jokes
+---
+
+![](http://static.flickr.com/48/119267035_972b51ff5b.jpg?v=0)
+

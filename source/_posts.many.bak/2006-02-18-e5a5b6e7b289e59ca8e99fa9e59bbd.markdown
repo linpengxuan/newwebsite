@@ -1,0 +1,16 @@
+---
+author: linpx
+date: '2006-02-18 03:12:15'
+layout: post
+slug: '%e5%a5%b6%e7%b2%89%e5%9c%a8%e9%9f%a9%e5%9b%bd'
+status: publish
+comments: true
+title: 奶粉在韩国
+wordpress_id: '212'
+categories:
+- life
+---
+
+I finally found milk power sold in Korea, one and a half year since I came
+here.
+

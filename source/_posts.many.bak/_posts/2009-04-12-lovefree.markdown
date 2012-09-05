@@ -1,0 +1,17 @@
+---
+author: sourrabbit
+date: '2009-04-12 14:03:51'
+layout: post
+slug: lovefree
+status: publish
+comments: true
+title: love&free
+wordpress_id: '511'
+---
+
+If you love something, set it free.
+
+If it comes back to you, it is yours.
+
+If it doesn't , it never was.
+

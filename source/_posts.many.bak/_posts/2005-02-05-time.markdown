@@ -1,0 +1,14 @@
+---
+author: linpx
+date: '2005-02-05 01:42:01'
+layout: post
+slug: time
+status: publish
+comments: true
+title: time
+wordpress_id: '382'
+---
+
+it doesn't matter what you do, but do it quickly and efficiently.
+不管做什么事情，请做得有效率，因为我们的时间有限.
+

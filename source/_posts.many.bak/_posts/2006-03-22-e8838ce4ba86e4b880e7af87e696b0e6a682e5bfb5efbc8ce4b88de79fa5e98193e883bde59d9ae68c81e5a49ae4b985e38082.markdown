@@ -1,0 +1,15 @@
+---
+author: linpx
+date: '2006-03-22 14:21:06'
+layout: post
+slug: '%e8%83%8c%e4%ba%86%e4%b8%80%e7%af%87%e6%96%b0%e6%a6%82%e5%bf%b5%ef%bc%8c%e4%b8%8d%e7%9f%a5%e9%81%93%e8%83%bd%e5%9d%9a%e6%8c%81%e5%a4%9a%e4%b9%85%e3%80%82'
+status: publish
+comments: true
+title: 背了一篇新概念，不知道能坚持多久。
+wordpress_id: '178'
+categories:
+- life
+---
+
+March 24, 我又背了一篇， spider。啊哈和。
+

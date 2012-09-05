@@ -1,0 +1,23 @@
+---
+author: linpx
+date: '2006-03-06 01:04:49'
+layout: post
+slug: blog%e6%b2%a1%e4%ba%ba%e7%9c%8b
+status: publish
+comments: true
+title: blog没人看
+wordpress_id: '190'
+categories:
+- life
+---
+
+1, blog没人看，惨。
+
+2, 分析了一下。我的blog不受欢迎的主要原因就是不用中文写。
+
+3,为什么不用中文写，因为写blog的主要目的就是为了练英文。第二目的是为了写回忆录方便。
+
+4,第二个原因，关心他人不够。所谓礼尚往来，自己不去其他人blog逛逛，他们已经忘了要来你这留言了。
+
+5,估计是爱现。
+
