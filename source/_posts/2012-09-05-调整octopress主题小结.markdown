@@ -16,7 +16,7 @@ http://melandri.net/2012/02/14/octopress-theme-customization/)
 
 
 ![](http://farm9.staticflickr.com/8033/7934929014_e330c5a861_z.jpg)
-
+<!--more-->
 ####分离navigation bar
 
 由于octopress基于jekyll模式，我很方便地根据文章的提示，将主题对应的源代码下载下来。没有多想。直接将这个`sass/custom/_styles.scss`考入我的博客文件系统里面。
