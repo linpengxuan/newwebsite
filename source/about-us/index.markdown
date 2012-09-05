@@ -10,9 +10,13 @@ footer: false
 *	We always want to experience something new. The world is too big to explore, yet we are running out of time.
 *	We are Chinese, currently are learning Korean and French. New languages, popular or small, always inspire us new concepts, that there always are a lot things we know we don't know and we love to know.
 
----updated on Feb, 2012---
+---updated on Feb., 2012---
 
-![](http://farm8.staticflickr.com/7153/6759312559_9bdf6c89c7.jpg)
+![](http://farm9.staticflickr.com/8283/7691563550_3121389ddc_z.jpg)
+at Topkapi Palace, Istanbul
+
+
+---updated on Sep., 2012---
 
 ####what @linpx left here
 *    [@linpx's flickr](http://www.flickr.com/photos/pennyg/),他在这儿留下手机随手拍下的一些照片，做些探索可能会有新的发现。
