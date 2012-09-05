@@ -13,7 +13,7 @@ footer: false
 ---updated on Feb., 2012---
 
 ![](http://farm9.staticflickr.com/8283/7691563550_3121389ddc_z.jpg)
-at Topkapi Palace, Istanbul
+Taken at Topkapi Palace, Istanbul. Previous photo is available [here](http://farm8.staticflickr.com/7153/6759312559_9bdf6c89c7.jpg).
 
 
 ---updated on Sep., 2012---
