@@ -1,6 +1,6 @@
 ---
 title: 'octopress博客主题调整小结'
-date: 2012-09-05 13:46:13
+date: 2012-09-05 16:37:11
 author: linpx
 categories: octopress
 comments: true
@@ -10,9 +10,9 @@ published: true
 ---
 太难了，对博客主题的更改。这是我大半年以前刚开始写博时的感觉。毕竟octopress不是wordpress，很方便的随便点击几下确定键就可以了。我确实尝试过，失败了。一个很重要的原因是，我不知道css的语法。不知道的话，很简单，就去学。css不是excel啊，太难学了。我的那种抄袭式的学习方式根本派不上用场。在没有办法搞定的前提下，我选择忽略对主题背景修改的重视。这一放，就到了半年后，也就是现在。
 
-我要求的博客样式非常简单。我想让我博客中的背景图片统一。怎么样，很简单吧。问题就在这里，我找到了满意的照片，却不知道应该放到哪个文件夹去。即使放下后，基于octopress完全定制的风格，我也不知道应该从哪儿修改文件。一切从昨天突然想到的一次google收索开始。[Alessandro
-Melandri](http://melandri.net/2012/02/14/octopress-theme-customization/)
-的这篇博客一看到就非常喜欢。完全符合我的风格。背景统一，干净，简介。
+我要求的博客样式非常简单。我想让我博客中的背景图片统一。怎么样，很简单吧。问题就在这里，我找到了满意的照片，却不知道应该放到哪个文件夹去。即使放下后，基于octopress完全定制的风格，我也不知道应该从哪儿修改文件。一切从昨天突然想到的一次google收索开始。这篇[博文](
+http://melandri.net/2012/02/14/octopress-theme-customization/)
+参考后，帮助很大。完全符合我的风格。背景统一，干净，简介。
 
 ![](http://farm9.staticflickr.com/8033/7934929014_e330c5a861_z.jpg)
 
@@ -36,11 +36,11 @@ octopress的中文字体我就不修改了，因为不会。英文字体还是OK
 http://octopress.org/docs/theme/)。我直接讲我的方法。
 
 先寻找心仪的字体。我一般上google web fonts里找到后，寻找给出的字体使用链接即可样式如下`<link href='http://
-......>`.下面这个文件是我的字体方案，供参考。
+......>`.下面这个文件是我的字体方案，供参考。于`source/_includes/custom/head.html`
 
 {% gist 3631035 %}
 
-找到字体后，就要定义字体如何使用了。
+找到字体后，就要定义字体如何使用了。于`sass/custom/_fonts.scss`
 
 {% gist 3631051 %}
 
@@ -54,14 +54,14 @@ http://octopress.org/docs/theme/)。我直接讲我的方法。
 http://www.designshard.com/freebies/ultimate-source-for-tiled-background-patterns/
 );
 3. [dinpattern](http://www.dinpattern.com/);
-4. [patterncooler](patterncooler.com
+4. [patterncooler](http://patterncooler.com <http://patterncooler.com>
 )是我背景下载的网站，牛逼在于可以选择pattern重复的尺寸，颜色，还可以免费下载。东西选择太多，反而不知道要走哪一个了。呵呵。
 
 ![](http://farm9.staticflickr.com/8036/7935087262_1cbbd2fa2f_z.jpg)
 
 ####结语
 
-前些天我看到了jekyll bootstrap作者整了个[ruhoh.com](ruhoh.com
+前些天我看到了jekyll bootstrap作者整了个[ruhoh.com](http://www.ruhoh.com<http://ruhoh.com>
 ),非常漂亮的jekyll博客平台。就不多说它网页上的好处了，居然可以无缝支持我octopress上的中文名permlink这点就让我当时就有移过去的冲动了。只是整起来花些时间，如果是打算新开博客的朋友，倒是一个很好的选择。在机子上或vps上搭好ruby平台就行了。不像octopress这样，当初为了整这个就花了好久。
 
 博客写久了会有写博客的习惯。我和我太太就很有信心将这个博客写上60年。只是未知那时是否还是如此复杂的人机交流模式。
