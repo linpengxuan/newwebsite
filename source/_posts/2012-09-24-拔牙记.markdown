@@ -2,7 +2,7 @@
 title: '拔牙记'
 date: 2012-09-24 09:30:00
 author: linpx
-categories: life xp exam
+categories: life xp 
 comments: true
 layout: post
 markup: markdown
