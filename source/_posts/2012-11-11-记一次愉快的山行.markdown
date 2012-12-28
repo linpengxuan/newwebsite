@@ -23,13 +23,13 @@ http://www.flickr.com/photos/pennyg/sets/72157631973123892/
 今早起来，林太就直呼全身酸痛，被我嘲笑，直到中午外出步行才发觉小腿过于绷紧...我们双方达成共识，这样的山行得以传统方式保持下去。我当然乐意，毕竟生日一年也才一次。
 
 {% gallery %}
-8202/8171571911_fe11bb8ab1_b.jpg:
-8070/8171602448_ac8890fde4_b.jpg:
-8062/8171572241_c936e4281c_b.jpg:
-8057/8171572517_407495d360_b.jpg:
-8065/8171573213_fc637c4760_b.jpg:
-8483/8174372234_061c2cd03b_b.jpg:
-8204/8171603660_49be3dc290_b.jpg:
-8480/8174345037_aedfa33428_b.jpg:
-8345/8174380486_cb18d60f78_b.jpg:
+9.staticflickr.com/8202/8171571911_fe11bb8ab1_b.jpg:
+9.staticflickr.com/8070/8171602448_ac8890fde4_b.jpg:
+9.staticflickr.com/8062/8171572241_c936e4281c_b.jpg:
+9.staticflickr.com/8057/8171572517_407495d360_b.jpg:
+9.staticflickr.com/8065/8171573213_fc637c4760_b.jpg:
+9.staticflickr.com/8483/8174372234_061c2cd03b_b.jpg:
+9.staticflickr.com/8204/8171603660_49be3dc290_b.jpg:
+9.staticflickr.com/8480/8174345037_aedfa33428_b.jpg:
+9.staticflickr.com/8345/8174380486_cb18d60f78_b.jpg:
 {% endgallery %}
