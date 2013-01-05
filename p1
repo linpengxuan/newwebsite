@@ -1,5 +1,0 @@
-#!/bin/sh
-rm source/_posts.many.bak/*.* -rf
-cp source/_posts/*.* source/_posts.many.bak/. 
-rm source/_posts -rf
-cp source/_posts.1.bak source/_posts -rf

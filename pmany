@@ -1,3 +1,0 @@
-#!/bin/sh
-rm source/_posts -rf
-cp source/_posts.many.bak source/_posts -rf
