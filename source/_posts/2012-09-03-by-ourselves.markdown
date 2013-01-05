@@ -1,0 +1,17 @@
+---
+title: '自力更生'
+date: 2012-09-03 20:14:08
+author: sourrabbit
+categories: life rabbit korea
+comments: true
+layout: post
+markup: markdown
+published: true
+---
+自己发博客和图片。
+
+林先生这个中间人可以下岗了。
+
+操作小黑窗口的时候，yy了一下自己是个大牛技术人员。
+
+![](http://farm9.staticflickr.com/8306/7920800546_6c2156fbc1.jpg)

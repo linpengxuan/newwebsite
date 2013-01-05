@@ -1,0 +1,36 @@
+---
+title: 'I, Robot观影'
+date: 2012-08-19 13:38:06
+author: linpx
+categories: movie
+comments: true
+layout: post
+markup: markdown
+published: true
+---
+周末在家开始看阿西莫夫的基地。很有意思的一本书，只是由于我自己的原因，经常看一会就走神了，很是自责。比如刚才走神走得突然就想看看他同名小说改变的电影,`I,
+Robot`.这部电影是我念硕士的时候就特别想看的，那时候是先在苹果网站上看到了预告片，就一直期待，等到上映后，特地跑去电影院看的，如果没有记错的话。那时候就很震撼，不过没有今天再次观感来得深刻。
+
+先来一段预告片吧。预告片看多了，会有种感觉，预告片是另外一部完全不同的电影，剪辑人员就是想要误导观众，把各种因果关系弄混乱，如果他们反而能够述说出另外一个故事，也算是很成功的预告片了。照我N年的观影心得（相信我，每个中国大学生毕业时都是双学位的，无一例外地有个电影主修），这部拍得相当不错。
+<iframe width="640" height="360" src="
+http://www.youtube.com/embed/rL6RRIOZyCM" frameborder="0"
+allowfullscreen></iframe>
+
+故事就不多说了，2004年的老片没看过的人不多。但是必须看到，[小说](http://en.wikipedia.org/wiki/I,_Robot)
+原著出版的时间是1950年，这点就足够吊我们的胃口了。多厉害的想象力，把50多年后的我们硬是看得一愣一愣的。也不用多提作者阿西莫夫的机器人三大定律，不知道被多少科幻作品套用。到最后，反倒是知道这个的比了解作者的还多。影片一开头就强调了这个前提，也是故事展开的基础。
+
+{% blockquote Isaac Asimov http://en.wikipedia.org/wiki/Three_Laws_of_Robotics Three Laws of Robotics %}
+1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.
+2. A robot must obey the orders given to it by human beings, except where such orders would conflict with the First Law.
+3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Laws.
+{% endblockquote %}
+
+另外，一个非常吸引我的地方是影片中机器人的设计，实在是神作。优雅而美丽，有种第一次看到乔布斯出场介绍iPhone4的感觉（是的，前3代iPhone都无法如此吸引我）。然后再看上一段最后半小时机器人互殴的情景，直接醉倒。
+
+{% img center http://farm8.staticflickr.com/7248/7812896806_1a595d51cd_b.jpg 503 755 机器人_1 %}
+
+{% img center http://farm9.staticflickr.com/8421/7812896876_62b3337cea_b.jpg 535 716 机器人_2 %}
+
+我有种怪癖，角色扮演。比如看电影过程中，把自己扮演成某种来自某个年代的人，以他们的角度来观看的话，又会产生何种享受。本片结尾音乐有种碟战类型，耍阴谋的电子音乐，鼓点也很强烈，节奏快，我就想如果我是战国时候的国王，听到这样的音乐会是何种心情，很有趣。
+
+是个好片子，值得一看。
