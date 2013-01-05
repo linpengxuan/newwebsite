@@ -14,10 +14,8 @@ title: 乱写
 
 刚才看推的时候，有个搞笑的条目先和大伙共享下。
 
-{% blockquote @darrenest
-https://twitter.com/darrenest/status/286800870660767744 %}
-真心求教：「穷则独善其身，达则兼济天下」怎么翻译成英文，要求信达雅。 有人回答：「 Fuck the world if you're rich,
-otherwise go fuck yourself. 」#精辟
+{% blockquote @darrenest https://twitter.com/darrenest/status/286800870660767744 %}
+真心求教：「穷则独善其身，达则兼济天下」怎么翻译成英文，要求信达雅。 有人回答：「 Fuck the world if you're rich, otherwise go fuck yourself. 」#精辟
 {% endblockquote %}
 
 ####周五晚上见朋友
