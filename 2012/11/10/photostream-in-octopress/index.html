@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>在octopress上引入相片流 - sourrabbit & linpx</title>
+  <meta name="author" content="Dong Ping; Lin Pengxuan">
+
+  
+  <meta name="description" content="我一直很想在博客上能够多一项小功能，就是照片流。这样我就可以把flickr上的照片一连串的全部共享出来，或者有次出行了，拍了些照片，只要把博文地址微博给朋友，就可以上来浏览了。没错，就是和以前msn博客上的相册是一个道理。只是换到了octopress后，这些都得自己动手整。很繁琐，不过弄好了的话， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://linpengxuan.github.com/newwebsite/blog/2012/11/10/photostream-in-octopress">
+//  <link href="/favicon.png" rel="icon">
+<link href="http://colors4.us/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/linpx_sourrabbit_rss" rel="alternate" title="sourrabbit & linpx" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Ruge+Boogie|Ruthie|Flavors|Rancho|Galdeano' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Philosopher:[object Object],[object Object],[object Object],[object Object]' rel='stylesheet' type='text/css'>
+
+
+<!-- Load jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery.noConflict(); // ender.js conflicts with jQuery
+</script>
+
+<!-- Load FancyBox -->
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" />
+<script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+
+<!-- Custom Scripts -->
+<script language="Javascript" type="text/javascript">
+    // ender.js gobbles jQuery's ready event: Use ender.js $ instead
+    $(document).ready(function() {
+        jQuery(".fancybox").fancybox();
+    });
+</script>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-28584476-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">sourrabbit & linpx</a></h1>
+  
+    <h2>a blog for the colors in our life</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/linpx_sourrabbit_rss" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:linpengxuan.github.com/newwebsite" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="http://www.flickr.com/photos/pennyg/sets">Photos</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">在octopress上引入相片流</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-10T22:53:26+08:00" pubdate data-updated="true">Nov 10<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>我一直很想在博客上能够多一项小功能，就是照片流。这样我就可以把flickr上的照片一连串的全部共享出来，或者有次出行了，拍了些照片，只要把博文地址微博给朋友，就可以上来浏览了。没错，就是和以前msn博客上的相册是一个道理。只是换到了octopress后，这些都得自己动手整。很繁琐，不过弄好了的话，还是有成就感的。</p>
+
+<h4>设立相册的可能性</h4>
+
+<p>当然是可能的了，要不这篇博客就没有意义了。</p>
+
+<p>我本人是不会任何编程，也不是学计算机的，所以很多时候，我知道这样去尝试可能可以，至于要问我为什么可以，对不起，实际上我这里给出的编码啥意思，自己也不明白。只要能得到想要的结果，知其然而不知其所以然，也挺好，不是？</p>
+
+<p>我这里引用的代码是<a href="http://fancyapps.com/fancybox/">fancybox</a>,做好后会有这样的<a href="http://fancyapps.com/fancybox/demo/">效果</a>。很显然，对于一个超小众的octopress博客平台来说，想使用另一个超小众的的相片流代码，一定得找成功的先例。实际上，平台比较出名的<a href="http://zespia.tw/Octopress-Theme-Slash/">slash主题</a>已经支持了fancybox，不过并未给出如何设置。于是，我找到了这篇文章<a href="http://tritarget.org/blog/2012/05/07/integrating-photos-into-octopress-using-fancybox-and-plugin/">Integrating Photos Into OctoPress Using FancyBox and Plugin</a>。写得非常好，以至于我在第一次rake generate就成功了，而并未出现我期待的解析错误。<!--more--></p>
+
+<h4>操作步骤</h4>
+
+<p>我这里就直接给从操作步骤了，想要理解为何的同学，还是移步到<a href="http://tritarget.org/blog/2012/05/07/integrating-photos-into-octopress-using-fancybox-and-plugin/">引文链接</a>去看看吧。</p>
+
+<p><strong>第一步</strong>，把<code>photos_tag.rb</code><a href="https://gist.github.com/2631877">文件</a>放到<code>plugins/</code>文件夹去。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://gist.github.com/2631877.git  #文件在2631877文件夹中</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>第二步</strong>，在<code>source/_includes/custom/head.html</code> 文件底部加入如下内容</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;!-- Load jQuery -->
+</span><span class='line'>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript">&lt;/script>
+</span><span class='line'>&lt;script type="text/javascript">
+</span><span class='line'>    jQuery.noConflict(); // ender.js conflicts with jQuery
+</span><span class='line'>&lt;/script>
+</span><span class='line'>
+</span><span class='line'>&lt;!-- Load FancyBox -->
+</span><span class='line'>&lt;link rel="stylesheet" href="/fancybox/jquery.fancybox.css" />
+</span><span class='line'>&lt;script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript">&lt;/script>
+</span><span class='line'>
+</span><span class='line'>&lt;!-- Fix FancyBox style for OctoPress -->
+</span><span class='line'>&lt;style type="text/css">
+</span><span class='line'>  .fancybox-wrap { position: fixed !important; }
+</span><span class='line'>  .fancybox-opened {
+</span><span class='line'>    -webkit-border-radius: 4px !important;
+</span><span class='line'>       -moz-border-radius: 4px !important;
+</span><span class='line'>            border-radius: 4px !important;
+</span><span class='line'>  }
+</span><span class='line'>  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+</span><span class='line'>    background-color: transparent !important;
+</span><span class='line'>    border: 0 !important;
+</span><span class='line'>  }
+</span><span class='line'>&lt;/style>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;!-- Custom Scripts -->
+</span><span class='line'>&lt;script language="Javascript" type="text/javascript">
+</span><span class='line'>    // ender.js gobbles jQuery's ready event: Use ender.js $ instead
+</span><span class='line'>    $(document).ready(function() {
+</span><span class='line'>        jQuery(".fancybox").fancybox();
+</span><span class='line'>    });
+</span><span class='line'>&lt;/script></span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>第三步</strong>， 在<code>sass/custom/_styles.scss</code>追加如下内容</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/* FancyBox Galleries */
+</span><span class='line'>$rad: 6px;
+</span><span class='line'>ul.gallery {
+</span><span class='line'>  border: thin solid gray;
+</span><span class='line'>  -webkit-border-radius: $rad;
+</span><span class='line'>  -moz-border-radius: $rad;
+</span><span class='line'>  border-radius: $rad;
+</span><span class='line'>  text-align: center;
+</span><span class='line'>  padding: 5px;
+</span><span class='line'>  li {
+</span><span class='line'>    display: inline;
+</span><span class='line'>    padding: 5px;
+</span><span class='line'>  }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>第四步</strong>，从这里开始就是微调了。如果看过原文的话，会发现相册流是不直接支持flickr的网址的，任何网址在使用时，都会在前方默认加上网站地址，我的情况是，会出现诸如<code>http://colors4.us/farm9.staticflickr.com...</code>等没有意义的网址。这一步的解决方法，对我来说可以用，但不完美，我个人妥协了。可以在<code>_config.yml</code>中加入如下内容：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>photos_prefix: https://farm</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strike>这样做就如同设立了歌permlink一样，规定死了打头网址的内容，后面我们在博文中输入相册照片地址<code>http://farm9.staticflickr.com/8198/8171602168_1788957e3c_m.jpg</code>时，只需输入<code>8198/8171602168_1788957e3c_m.jpg</code>即可。</strike></p>
+
+<p><strike>但是如果常用flickr的朋友就会发现，这里有个前提，就是所有的相片的网址，都必须在<code>farm9</code>这个网址段上。我个人来说，使用时间够长，我照片网址从<code>farm1</code>到<code>farm9</code>都有，设死了的话就没有办法套用其他网址段的照片了。我做了很多次试验，发现只要后面那段数字正确，前面的网址段变化的数字不会产生影响，或者直接说<code>http://farm9.staticflickr.com/8198/8171602168_1788957e3c_m.jpg</code>等于<code>http://farm1.staticflickr.com/8198/8171602168_1788957e3c_m.jpg</code>。</strike></p>
+
+<p>其实我突然想到，这个flickr不同服务器的问题。实际上，我只需在_config.yml上登记<code>http://farm</code>即可，剩下在博文中输入<code>9.staticflickr.com/8198/817160...</code>即可完美解决该问题。这样的结果就是可以自由调整服务器的数字1~9，而不用担心会不会突然链接被重置。哈哈，我太厉害了。</p>
+
+<p><strong>第五步</strong>，这里介绍实例，请一定注意看井号后面的说明。如果只展示一张的话，可在博文中插入如下内容：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[% photo 9.staticflickr.com/8198/8171602168_1788957e3c_b.jpg default 这里输入照片的名字 %] #把句子前后的中括号改成大括号，因为它本身放入博文就可执行了</span></code></pre></td></tr></table></div></figure>
+
+
+<p>如果展示相册流的话，则插入如下内容：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[% gallery %] #把本行句子前后的中括号改成大括号
+</span><span class='line'>9.staticflickr.com/7120/7698203656_ae8ae99ed3_b.jpg: pic1      #thumb pic默认为7698203656_ae8ae99ed3_m.jpg，刚好和flickr对应
+</span><span class='line'>9.staticflickr.com/3504/3997360729_cdaf975b63_z.jpg[9.staticflickr.com/3504/3997360729_cdaf975b63_m.jpg]: pic2       #可以自己设定thumb pic置于中括号内
+</span><span class='line'>9.staticflickr.com/6182/6150404978_10c5d6b9c5_b.jpg: pic3
+</span><span class='line'>9.staticflickr.com/7278/7714113508_3c28b8eaa0_b.jpg:                      #可以不起名字，但是一定不能省略冒号
+</span><span class='line'>3.staticflickr.com/2511/3976228983_a670a644b4_o.jpg[3.staticflickr.com/2511/3976228983_5ef14d2ca5_m.jpg]: pic5
+</span><span class='line'>9.staticflickr.com/4142/4782988086_065998b9af_b.jpg: pic6
+</span><span class='line'>[% endgallery %] #把本行句子前后的中括号改成大括号</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>演示</h4>
+
+<p>我这里就先演示一下fancybox相片流的效果吧。</p>
+
+<p><a href="https://farm9.staticflickr.com/8198/8171602168_1788957e3c_b.jpg" class="fancybox" title="这里输入照片的名字 "><img src="https://farm9.staticflickr.com/8198/8171602168_1788957e3c_m.jpg" alt="这里输入照片的名字 " /></a></p>
+
+<hr />
+
+<ul class="gallery">
+<li><a href="https://farm9.staticflickr.com/7120/7698203656_ae8ae99ed3_b.jpg" class="fancybox" rel="gallery-c2da4f7f097dde444c94b27bbfbdb8f3" title="这里起名字"><img src="https://farm9.staticflickr.com/7120/7698203656_ae8ae99ed3_m.jpg" alt="这里起名字" /></a></li><li><a href="https://farm4.staticflickr.com/3504/3997360729_cdaf975b63_z.jpg" class="fancybox" rel="gallery-c2da4f7f097dde444c94b27bbfbdb8f3" title="也可以不起名字"><img src="https://farm4.staticflickr.com/3504/3997360729_cdaf975b63_m.jpg" alt="也可以不起名字" /></a></li><li><a href="https://farm9.staticflickr.com/6182/6150404978_10c5d6b9c5_b.jpg" class="fancybox" rel="gallery-c2da4f7f097dde444c94b27bbfbdb8f3" title="起个喜欢的名字吧"><img src="https://farm9.staticflickr.com/6182/6150404978_10c5d6b9c5_m.jpg" alt="起个喜欢的名字吧" /></a></li><li><a href="https://farm9.staticflickr.com/7278/7714113508_3c28b8eaa0_b.jpg" class="fancybox" rel="gallery-c2da4f7f097dde444c94b27bbfbdb8f3" title=""><img src="https://farm9.staticflickr.com/7278/7714113508_3c28b8eaa0_m.jpg" alt="" /></a></li><li><a href="https://farm3.staticflickr.com/2511/3976228983_a670a644b4_o.jpg" class="fancybox" rel="gallery-c2da4f7f097dde444c94b27bbfbdb8f3" title="maybe an English one?"><img src="https://farm3.staticflickr.com/2511/3976228983_5ef14d2ca5_m.jpg" alt="maybe an English one?" /></a></li><li><a href="https://farm9.staticflickr.com/4142/4782988086_065998b9af_b.jpg" class="fancybox" rel="gallery-c2da4f7f097dde444c94b27bbfbdb8f3" title="haha"><img src="https://farm9.staticflickr.com/4142/4782988086_065998b9af_m.jpg" alt="haha" /></a></li>
+</ul>
+
+
+<p>我平常拍照不多，fancybox简单的功能刚好能满足我的需求。呵呵，不容易啊，上了octopress的船要想下，确实不容易啊，只能自己举着鞭子敲着自己了。:)</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">linpx</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-10T22:53:26+08:00" pubdate data-updated="true">Nov 10<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/computer/'>computer</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://linpengxuan.github.com/newwebsite/blog/2012/11/10/photostream-in-octopress/" data-via="linpx" data-counturl="http://linpengxuan.github.com/newwebsite/blog/2012/11/10/photostream-in-octopress/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/11/09/bo-zhe/" title="Previous Post: 波哦波折额折---波折">&laquo; 波哦波折额折---波折</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/11/11/a-nice-memory-of-mountain-hiking/" title="next Post: 记一次愉快的山行">记一次愉快的山行 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Us</h1>
+<p>My wife <a href="http://twitter.com/sourrabbit">@sourrabbit</a> and I <a href="http://twitter.com/linpx">@linpx</a> are the only authors contributing to this blog. We believe life is a book, from which all those good and bad, happy and sad things are written. We commit to keep this blog up, for the memories of the past as well as the colors in our life.<a href="http://www.colors4.us/about-us/index.html">...</a></p>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/03/17/a-new-journey/">新的旅程</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/16/nights-before-leaving-korea/">离开韩国前夕</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/14/re-rent/">再搬家</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/12/say-goodbye-to-my-wisdom-teeth/">致我终将逝去的智齿们</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/25/a-life-of-ease-and-comfort-in-taiwan/">停留在台湾的小安逸</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("linpx", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/linpx" class="twitter-follow-button" data-show-count="false">Follow @linpx</a>
+  
+</section>
+
+<section>
+ <h1>Categories</h1>
+ <ul id="categories">
+ <li class='category'><a href='http://colors4.us/blog/categories/computer/'>computer (23)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/connect/'>connect (1)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/dream/'>dream (2)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/exam/'>exam (4)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/job/'>job (6)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/jokes/'>jokes (32)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/korea/'>korea (34)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/life/'>life (156)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/miscellaneous/'>miscellaneous (5)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/movie/'>movie (13)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/octopress/'>octopress (11)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/photo/'>photo (34)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/rabbit/'>rabbit (10)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/reading/'>reading (6)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/society/'>society (17)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/sourrabbit/'>sourrabbit (4)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/thoughts/'>thoughts (5)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/travel/'>travel (16)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/xp/'>xp (12)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/旧闻/'>旧闻 (2)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/爱好/'>爱好 (2)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/话/'>话 (1)</a></li>
+
+ </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Dong Ping; Lin Pengxuan -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'linpx';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://linpengxuan.github.com/newwebsite/blog/2012/11/10/photostream-in-octopress/';
+        var disqus_url = 'http://linpengxuan.github.com/newwebsite/blog/2012/11/10/photostream-in-octopress/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

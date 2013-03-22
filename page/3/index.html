@@ -1,0 +1,803 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>sourrabbit & linpx</title>
+  <meta name="author" content="Dong Ping; Lin Pengxuan">
+
+  
+  <meta name="description" content="本篇博文专门针对本网站，可能(99.9%)不合适其他octopress博客系统。这里提出仅是抛砖引玉，给octopress爱好者提供一个新想法。 我先介绍我的博客。我的博客发表比较特别，是用电子邮件发送。这意味着只要手里有网络不用搭建任何平台就可以进行文字发表。有兴趣的可以看看我的这篇文字
+， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://linpengxuan.github.com/newwebsite/blog/page/3">
+//  <link href="/favicon.png" rel="icon">
+<link href="http://colors4.us/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/linpx_sourrabbit_rss" rel="alternate" title="sourrabbit & linpx" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Ruge+Boogie|Ruthie|Flavors|Rancho|Galdeano' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Philosopher:[object Object],[object Object],[object Object],[object Object]' rel='stylesheet' type='text/css'>
+
+
+<!-- Load jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery.noConflict(); // ender.js conflicts with jQuery
+</script>
+
+<!-- Load FancyBox -->
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" />
+<script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+
+<!-- Custom Scripts -->
+<script language="Javascript" type="text/javascript">
+    // ender.js gobbles jQuery's ready event: Use ender.js $ instead
+    $(document).ready(function() {
+        jQuery(".fancybox").fancybox();
+    });
+</script>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-28584476-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">sourrabbit & linpx</a></h1>
+  
+    <h2>a blog for the colors in our life</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/linpx_sourrabbit_rss" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:linpengxuan.github.com/newwebsite" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="http://www.flickr.com/photos/pennyg/sets">Photos</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/26/permalinks-setup-in-octopress/">Octopress博文设置中英文题目</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-26T17:00:42+08:00" pubdate data-updated="true">Dec 26<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/12/26/permalinks-setup-in-octopress/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>本篇博文专门针对本网站，可能(99.9%)不合适其他octopress博客系统。这里提出仅是抛砖引玉，给octopress爱好者提供一个新想法。</p>
+
+<p>我先介绍我的博客。我的博客发表比较特别，是用电子邮件发送。这意味着只要手里有网络不用搭建任何平台就可以进行文字发表。有兴趣的可以看看我的这篇<a href="http://colors4.us/blog/2012/01/20/%E5%88%A9%E7%94%A8%E9%82%AE%E4%BB%B6%E5%8F%91%E8%A1%A8octopress%E5%8D%9A%E5%AE%A2/">文字</a>
+，<strong>介绍如何用电子邮件发布博客</strong>。</p>
+
+<p>我也不知道是如何整好utf-8代码的，但弄好后，发布的博文地址全部带上了中文。在浏览器上还是挺好看的，不过拷贝后就能看到很多如<code>%88%A9%E7%94%A8%</code>般巨长地址，看完总是让我留下<strong>这不科学</strong>的惆怅感。不过今天在我进行调试的时候，总算摸到<strong>一个让博文保持中文标题，同时网址走英文格式的方法</strong>不敢独自敝帚。</p>
+
+<p>在邮件标题栏中，我发表原来是这样书写的：</p>
+
+<p>民国101年台湾旅行小记 || secret: ****** / author: linpx / categories: life /
+comments: true，</p>
+
+<p>(其实就是YMAL的文件头的设定), 现在如果改成这个样式就完全没有问题：</p>
+
+<p>trip to Taiwan in 2012 || title: 民国101年台湾旅行小记 / secret: ****** / author:
+linpx / categories: life / comments: true</p>
+
+<p>这样我就得到一片中文博客的题目，和一个英文的自定义网址，可以看成是permalink，方便以后转到其他平台。我果然已经在开始想其他平台了。</p>
+
+<p>参考了如下网址：</p>
+
+<ol>
+<li><a href="https://github.com/mojombo/jekyll/wiki/Permalinks">Permalinks wiki</a></li>
+<li><a href="https://github.com/mojombo/jekyll/wiki/Configuration">Permalinks Jekyll configuration</a></li>
+</ol>
+
+
+<p>图片一看就明白我说的是什么了。(文字表达能力不好的极好表现)</p>
+
+<p><img src="http://farm9.staticflickr.com/8499/8309147407_eb75fc9525_b.jpg" alt="" /></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/26/trip-to-taiwan-in-2012/">民国101年台湾旅行小记</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-26T16:03:23+08:00" pubdate data-updated="true">Dec 26<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/12/26/trip-to-taiwan-in-2012/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>12月19日开始的一个礼拜去了台湾。签证的申请是一大问题，前面博文已经提过，这里就不累赘。台湾是的好地方啊，出发之前就已经很明确了这次游玩的原则，一是吃的东西，二是泡的温泉。上次去土耳其的时候，确实是玩伤了。一个礼拜之内虽然去了很多地方，但是过夜都是在bus上。已经不复年轻时候的身体了，这次想想还是以休息为主。去之前没有做攻略，真的是兴之所至，履之所及。相信具体景点的详细内容，林太太会传上来的。我就谈几个我的印象。先推销一下这次拍的相片，拍的不多，可以在<a href="http://www.flickr.com/photos/pennyg/sets/72157632337631410/">Flickr</a>看到。</p>
+
+<h4>初步印象</h4>
+
+<p>我们是真的非常肯定地考虑在台湾找工作的可能性，丰富的饮食选择和完善的医疗保障（当然，具体实行我是没有研究过，提个想法）。人们非常亲切热情，第一晚机场大巴下来，风太大，外套一直没法穿起来，旁边路人就说，那你可能要背着风穿起来。我非常欣赏听到这个“那”字，很奇妙的感觉，非汉文母语就是无法理解的那种。台北的建筑肯定不走大陆的日新路线，但是维护下来，也有岁月的味道。加上不禁摩，非常好的政策，真的是做到人人有车，路路不堵。大赞一个。</p>
+
+<p><img src="http://farm9.staticflickr.com/8211/8305986657_d23ec29d69_z.jpg" alt="" /></p>
+
+<p>去一个新地方旅游的时候，心里防线阙值就会降得很低。对我尤其是，我基本上对任何主动靠近的服务选择直接无视，怕被骗，怕起纠纷，能说的理由多了。台湾旅游服务从业人员秉承了汉人的勤劳的特征，相当热情地提供各类服务，比如租车，旅馆等，在哪都会遇见，不过和国内完全不一样的地方就是不拖不缠，微笑着回答一声谢谢后就离开了，非常好。根据我们在这呆一礼拜的感觉，小概率的旅游欺诈事件没有遇到，这点很重要。然后考虑到最近出的一个调查数字里提到台湾人在亚洲国家里的快乐指数很高，我实在找不到这地方不好的理由。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/12/26/trip-to-taiwan-in-2012/">请猛击这里Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/14/rememberance-day/">纪念日</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-14T14:53:45+08:00" pubdate data-updated="true">Dec 14<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/12/14/rememberance-day/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今天是我和林先生第一次认识的纪念日，特此mark一下。</p>
+
+<p>时间过得好快啊。</p>
+
+<p>上个我们俩第一张合影吧。那会儿真年轻啊，有多多的胶原蛋白，少少的脂肪。现在都反过来了。</p>
+
+<p><img src="http://farm9.staticflickr.com/8058/8270878153_8eec4da96c_o.jpg" alt="" /></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/11/look-what-i-bought-from-us/">扫货战利品的试用报告</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-11T12:58:44+08:00" pubdate data-updated="true">Dec 11<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/12/11/look-what-i-bought-from-us/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>昨天收到了黑色星期五的战利品。以我和林先生喜新不厌旧的风格，当然要在第一时间进行试用。</p>
+
+<ol>
+<li><p>我的靴子。苦尽甘来绝对是对它最好的形容。之前一直以为是油吉吉，到家才发现原来是五克拉。下午在办公室里试穿，抽出了靴筒里的垫纸，没想到脚趾那里还有一大团，我穿的袜子太厚，也没感觉出来羊毛和垫纸的区别，当时穿进去觉得很紧，心里咯噔一下，兴奋指数直线下降。想着是不是还要寄回去换货，盒子什么的都没敢扔，下班一路抱回家去，手指冻成胡萝卜。大盒子挡住视线，过冰区时扭了脚，是两年前旧伤的地方，肿起一个包，牵着整条小腿都在痛。林先生昨晚打球，我要一个人吃饭，本来就不爽，好不容易挪到楼下，发现我想吃的店一家两家三家都关门，真心想朗诵一个靠字啊。一切都在进家门之后好转。首先二次试靴子，成功揪出那团捣乱的硬纸球，两只靴子都非常合适。然后开暖气，地热加电热器双重效应，全身都暖和了。吃饭时发现最爱的三文鱼罐头只剩大罐了，碍于减肥是否要吃小罐的忧虑也被解除。今早林先生摸黑爬上阁楼翻出一张膏药给我贴上，脚腕现在也舒服多了，上班路上一直在路边橱窗里欣赏我和新鞋子的合影。</p></li>
+<li><p>林先生的剃头推子。外形很流线，长得跟店里师傅用的专业工具一样。配了各种型号的塑料推头，梳子剪刀，还有一张大黑围兜。林先生打球十点多才回来，喝口水就开始剃了。对着镜子左一刀右一刀玩得正爽，杯具了——变压器烧坏了。林先生顶着完工五分之三的新发型决定手动修理，半小时后未果，还是我用剪刀给整好了。今天又下单买了一个新的，15天后到货。</p></li>
+<li><p>计算器。被林先生誉为投行人手一个的宝贝，据说手感很好。晕，这形容词，又不是买皮草。旧的那个现已被送进书架深处休养。</p></li>
+<li><p>某卡。刚查了下以前博客，貌似叫ssd卡，当然我不知道它是干什么用的，功能方面没出现故障，也没有让人眼前一亮的惊喜。怀疑林先生接下来又要开始拆电脑了，可怜我们二黑才刚买来几天而已。</p></li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/10/gleanning-day/">丰收的一天</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-10T14:34:34+08:00" pubdate data-updated="true">Dec 10<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/12/10/gleanning-day/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>中午正举着个大苹果边啃边打瞌睡，公司小妹抱来两个巨大的纸箱，惊叹：“你这都买的什么啊……”立刻精气神儿就回来了，摩拳擦掌开始验收前段时间败家的战利品。</p>
+
+<p>边拍照边开箱，如下物品映入眼帘：林先生的剃头推子一个，计算器一个，我的西北高原黄油吉吉一双。这周日准备练手下，给林先生推个头，这个脑袋从此以后我做主了。林先生请放心，我会让你潮潮潮到爆的。计算器玩了两分钟，最熟悉的是开关机键，各位数学老师我对不起你们。鞋子的情况比较特殊，之前买的登山鞋是
+6.5，穿起来有点大。本想这双6号的会正合适，结果试穿又有点小。黑线下，我的尺寸还真是特殊啊。</p>
+
+<p>上周首尔连下4天大雪，一不小心就没腿肚了，雪灌进鞋子里的感觉相当刺激。路上的冰冻得很结实，屁墩事件此起彼伏，扑通——后接各种九转十八弯的尾音。我偷笑了几天，终于在周五下班路上杯具了一把，得到了两个乌青的膝盖。</p>
+
+<p>周日去考试，万恶的考场没有暖气，我的座位在地下一层天窗边，头顶是嗖嗖地冷风带雪末，我裹得只剩下眼睛露在外面，手指僵硬几乎无法操作键盘。一欧洲姐姐对地理条件估计过于乐观，竟然进屋还敢脱外套，中场休息时闪电般冲出去穿羽绒服，脚步声听着有点踉跄。我冻得胃抽搐，休息时去洗手间吐了早饭，扭头看见脚边地板已经结冰，很自然地一句shit脱口而出。</p>
+
+<p>下周和林先生一起重游台湾，现在已经有点迫不及待了。咕嘟冒泡的火锅在远方招手，还有迷宫一样的夜市，路边各种小摊，我已经为这次暴饮暴食的旅行留出了5斤肥胖空间，反正现在有空了，跳操和自行车运动准备全都抓起来。</p>
+
+<p>当然，西门町那家可爱的庙是必须要去的，和林先生一起，带着我的小红线，再去喝一杯红枣茶。忽然想起在微博上看到的一句话，特别喜欢。“等我老了以后，孩子们问我，你的初恋情人现在在哪儿？我不需要去翻古旧的相册，只要用手指指身边就好了。”</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/08/asus-rt-ac66u-review/">Asus RT-AC66U开箱，使用，把玩（二）</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-08T14:32:42+08:00" pubdate data-updated="true">Dec 8<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/12/08/asus-rt-ac66u-review/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>网购的<a href="http://www.asus.com/Networks/Wireless_Routers/RTAC66U/">Asus RT-AC66U</a>
+总算在热切的期盼中到达了。花钱和浪费时间一样，负疚和犯罪感一样会同时出现。刚开始只是想搭车黑五，然后就出手了台比在韩国手机套餐还便宜的x230，之后考虑家里的网速，就问自己是不是再出手个路由器。你看，我就是这样一步步掉入这样商业社会的陷阱中去的，不要学啊。</p>
+
+<p><img src="http://farm9.staticflickr.com/8503/8254405262_8cd4a943e4_z.jpg" alt="" /></p>
+
+<p>也可能是我要求不多，用下来感觉这个路由器实在是过于强大了。原本还打算开着原来的老笔记本做个NAS，现在连这个都省了。用路由器挂着硬盘来下载。速度也很满意。</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/12/08/asus-rt-ac66u-review/">请猛击这里Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/05/thinkpad-x230/">Thinkpad X230入手报告(一)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-05T22:23:53+08:00" pubdate data-updated="true">Dec 5<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/12/05/thinkpad-x230/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>昨天上午2012-12-04拿到了上个月20日下单的Lenovo Thinkpad
+x230。心情一阵激动，整得我一天下来心思都放在新的电脑上，即时中午午休的一段时间都会偷偷将笔记本拿出把玩，全然忘记美式插头在首尔无法直接使用的事实。晚上到家亦是如此，一门心思放到新机上，每天的爬楼梯和减腹运动就放下了。恩，我还是有热情的。</p>
+
+<p><img src="http://farm9.staticflickr.com/8483/8246311115_1393ea0198_z.jpg" alt="" /></p>
+
+<h4>关于windows 8</h4>
+
+<p>第一次开机之后，我对win8的感觉就是惊艳，因为我一直用于xp的缘故。当然和mac系统还是有差距的，这个我直接忽略过去。系统画面漂亮了，当然喜欢用的人就多了。不过，稍微用久些就觉得自己的眼睛撑不住了。这和笔记本有关，x230是12.5寸的屏幕，分辨率上到了1366x768，字体精细比我09年的MBP上了个台阶，也带来了字体过小的问题。一句话，看久了眼睛累。我一发现问题，肯定就是要解决问题的。我第一个就想到了安装linux。windows我除了打算用于玩文明之外，竟然没有想到任何其他的用处。</p>
+
+<h4>tag:x230, UEFI, dual boot, linux mint</h4>
+
+<p>每隔一段时间，硬件商都会弄出一些大伙无法理解东西出来，比如这个UEFI，于是x230里安装的windows 8启动时，就不再按以前惯有的bios
+legacy方式了。好处我不知道，坏处是类似x230机主如我在安装linux时，未经设置的系统只能在legacy方式启动，很困惑，要么就只支持win
+8，要不就linux。电脑收拾洁癖的人是绝对无法忍受这样的方式，我就踏上了征程。这里只给出结果，但是达到满意结果之前呢，足足浪费了不少时间。</p>
+
+<ol>
+<li>正常安装win 8；</li>
+<li>bios切换legacy启动；正常usb安装linux mint 64bit，结束时选择continue test，不要reboot；</li>
+<li>参照<a href="https://help.ubuntu.com/community/Boot-Repair">这里</a>，安装boot-repair；在advanced
+option的GRUB LOCATION标签下设置后apply即可。</li>
+<li>将bios中的legacy模式调回UEFI启动后，极有可能win
+8就无法正常启动了，进入系统恢复中的盘符输入如下内容修复windows启动的mbr或gpt
+whatever，事实是我到现在还搞不清存这些东西，不过结果还是令人满意的。<code>bootrec.exe /fixboot;bootrec.exe
+/fixmbr</code>。</li>
+</ol>
+
+
+<p><img src="http://farm9.staticflickr.com/8068/8246390117_ce49971126_z.jpg" alt="" /></p>
+
+<h4>linux里的一些小细节</h4>
+
+<p>我在6年前曾经用了一年的linux，那时的一大爱好就是跑到<a href="http://www.distrowatch.com">distrowatch</a>上每隔一两天换着法子装新系统玩，虽然都是大同小异，还是让人热在其中，相信我，如我般的linux初学者不少。gentoo的ebuild折腾到我吐血的情景一下就历历在目起来。前一段登上去看了，原来用过的老版本都纷纷在version道路上升级着，居然冒出了个新成员：linux
+mint，把ubuntu打下，自己排到第一，就凭这个，我就想装来看看。果然linux mint是一个非常成熟的<a href="http://www.omgubuntu.co.uk/2012/11/linux-mint-14-with-cinnamon-desktop-review">系统</a>。</p>
+
+<p>第一个就是安装拼音输入法。以前linux系统里的拼音极度不稳定，一下有用一下没用的，现在这个情况被改变了。<code>sudo apt-get install
+ibus ibus-pinyin</code></p>
+
+<p>其他的暂时先不多说，会继续写下去，当然，得等到我拿到我的256gb Crucial mSATA SSD和16gb内存条以后。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/30/my-dream/">我的梦</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-30T10:31:38+08:00" pubdate data-updated="true">Nov 30<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/11/30/my-dream/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今天凌晨时分我做了一个梦，有逻辑有故事有内涵有发展的一个恐怖片主题大梦，吓得我汗如雨下，抓着林先生的手一直哆嗦。即便现在已经是大白天，公司人来人往，还放着欢乐的加州招待所，我还是不敢一个人去洗手间。决定今天少喝点水吧。</p>
+
+<p>在梦里，我没有角色，应该属于旁观的上帝视角。</p>
+
+<p>这是一个城市郊区的村子，有一户夫妻俩。老公貌似长着一张古天乐的脸，性格非常诡异，经常一个人在地下室里捣鼓。有一天傍晚夫妻俩吵架了，老婆要离家出走。老公狞笑着把老婆拖进地下室，原来地下室是个类似手术室的地方，老公是个变态杀手，他会把人麻醉以后分解，最后留一个清醒的活着的脑袋，摆在架子上陪他说话。老公把老婆按在台子上，拿一根粗针管准备注射麻醉，老婆吓得头扭来扭去，忽然发现自己脸边上还躺着另一个脑袋，正在盯着她。她吓得一躲，咕咚滚到台子下面，抓到一根木棍，和老公搏斗一番后冲出家门。</p>
+
+<p>路边没有灯，只有淡淡的月光。老婆狂奔了很久，好不容易停下来歇口气，一低头忽然发现脚下有两个影子。她回头一看，老公就在身后，盯着她狰狞地笑。老婆吓得大叫一声，拔腿就跑。这时前边路口走出一个喝醉的男人，摇摇晃晃，老婆飞快冲过去，抱着那个人的腰说救救我。</p>
+
+<p>然后就是这两个男人的对决了。两个人都是会武功的高手，变态老公是无影脚，喝醉的路人甲是醉拳。打架的声音很吵，四周的邻居都走出来看。两个人打了一会儿，老公发现占不到上风，就忽然向躲在一边的老婆扑过来。老婆赶紧又跑，邻居们原来也都是武功高手，纷纷出招挡住老公。但老公窜地非常快，眼看就要追上了，这时后边忽然开过一辆摩托车，经过老婆身边时一把把她拽了上去，老公的手已经抓到她的胳膊，最终还是被挣脱了。摩托车绝尘而去，一直开到大山里。</p>
+
+<p>场景变换，几天过去了。村子里的人决定联合在一起抓住变态老公，但老公跑掉了，不知道去了哪里。</p>
+
+<p>这天夜里，一个老伯骑着摩托车送老婆回村，老婆坐在后座上，披一件黑色的大衣，从头包到脚。老伯还很温和地说，你以后可以在村里的学校上学，学费不用担心。等你工作了，有能力的时候想还多少就还多少，属于捐赠性质。</p>
+
+<p>突然，前边的路中间出现一个黑影，慢慢抬起头，是那个变态老公。老伯的摩托车吱一声刹住，老公一步步向他们走过来，空气已经紧张到了头发丝儿……</p>
+
+<p>就在这时，我被吓醒了。一头一身的汗啊，心脏跳得都要从嘴里飞出来，林先生还睡得直打呼噜~~~</p>
+
+<p>好不容易又迷糊过去。我从小就有个能力，做到不喜欢的梦时，会重新睡过去，按自己的意识再次往下编个我喜欢的结局。这次也不例外。</p>
+
+<p>回到那条路上。老公一步步向摩托走近，忽然路边大亮，两边的树林里走出很多举着火把的武林高手村民，披着黑色大氅的老婆也一把掀掉大衣，原来是那个喝醉的路人甲高手。摩托车手老伯抖着胸肌哈哈大笑说：“这是我们给你设的陷阱，束手就擒吧！”</p>
+
+<p>就这样，变态老公淹没在人民群众的汪洋大海中。</p>
+
+<p>然后，闹钟响了，我该起床了。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/29/words-on-my-30th-b-day/">写在30岁生日这一天</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-29T17:07:22+08:00" pubdate data-updated="true">Nov 29<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/11/29/words-on-my-30th-b-day/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今天过生日，30岁了。从早上开始，北京手机陆续收到来自以下单位的生日短信：招商银行，北京市红十字血液中心，海南航空，民生信用卡中心，中国银行银行卡中心。忽然想起小时候每次过生日都能收到一堆同学送的卡片，上面沾满亮晶晶的银粉，一不小心就能抹得全身都是。稍稍感慨一下当今数字时代的生日模板，然后想到开心网收到朋友们送的蛋糕还没回赠礼物，赶紧又一一补上并道谢。</p>
+
+<p>爸爸妈妈、叔叔、妹妹、单子和许老师纷纷在QQ和MSN上和我说生日快乐。许老师说北京前天沙尘暴，本来要在北京降落的飞机都给吹到石家庄和太原去了。听得我直缩脖子，还好韩国这边风平浪静。单子非常自豪地声明这完全是她自己记得的，没有参考任何开心网或者微博提示。想起大学时有一次她家人过生日，她从家里带来一个巨大的水果蛋糕，桌子都放不下，搁在寝室地板上，我们几个围了一圈蹲着，很有丐帮风韵地人手一把饭勺舀着吃，那个蛋糕好像我们整整吃了三天，在没有冰箱存储的情况下竟然没拉肚子，年轻果然火力壮。再接着聊下去，从她要生老二到孩子奶粉，到可以买来荷兰奶粉的深圳阿毛表哥，到那年我们俩在深圳吃到的美味小店肠粉，以及吃完肠粉后她送给我并一直用到现在的红木梳……感叹下我的记忆库原来已经如此丰富，随便提个头就能捋出一长串紫嘟嘟的大葡萄来。</p>
+
+<p>总说时间过得快，但真的仔细回忆起来，过去的每一天都丰满充实，栩栩如生，只在于愿不愿回想而已。四年级过生日奶奶做了手工米线，我以单薄的小身板儿一口气撑下3大碗，那是我这辈子吃过最好吃的米线。大学的第一个生日被同学骗出寝室，再回来时就发现屋子正中放一把椅子，上面坐着个半人高的绒毛大熊，那只熊我搂着睡了四年。二十岁生日时同学们和我一起在寝室开party吃蛋糕，中间接到爸爸的电话，他说恭喜你从今天开始就是大人了。</p>
+
+<p>然后，十年倏地一下过去了，那会儿故意穿深色衣服配高跟鞋显示成熟的伪大人，已经成了一个没事就想买点粉红卡通衣服扮嫩刷绿漆的真大人，并即将在可预见的未来向一个脸皮厚度决定装嫩程度的老大人迅速递进。</p>
+
+<p>上述对肠粉和蛋糕的回忆刺激了肚子里的馋虫。脑海中不断闪现的一幕幕怀旧场景不知道什么时候过渡成这些画面：博实酸辣粉，艺园煎饼，北新凉皮，康博斯西红柿鸡蛋面，郭林家常菜，水煮鱼，西苑夜市，东门火锅，南门小笼包，西门烤翅……在时间和空间的双重隔离下，味蕾仍然能够准确再现这些青春期校园美食的原始风情。于是，我在办公室里流口水了。</p>
+
+<p>任沧海成桑田，一颗虔诚的吃货之心永不改变。</p>
+
+<p>这个生日收到超多礼物。物质方面，林先生早一个月就送了新衣服和ipad mini，black
+friday时又买到两双美貌的鞋子，现在正在漂洋过海的路上。顺便赞一下林先生帮我挑行头的品味绝对是：高！实在是高！朕在此特封你为林太太御用造型师，以后要更加努力帮我打扮哦。今晚还有一顿美味的牛肉火锅大餐，让体重浮云去吧。精神方面，昨晚睡到一半被林先生摇醒，跟我说十二点了生日快乐。很感动，林先生越来越擅长这种小浪漫了。</p>
+
+<p>从今天开始就要在奔四的道路上狂飙驰骋了。昨晚睡前林先生让我许个愿，我说，你得一直跟我在一块儿。在我的要求下，林先生对此表示肯定，并也重复了一遍这句话。他说我太肉麻，其实我说的时候确定一定以及肯定是特别严肃的。在此重申一遍，林先生，林太太要和你一块儿过四十岁、五十岁、六十岁、七十岁、八十岁……的所有生日，哪怕到时候要戴着假发，瘪着嘴用假牙吃蛋糕。鉴于家里的事我做主，所以你对此只有双手双脚赞成和五体投地赞成两个选择。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/12/yes-we-publish-it/">土耳其游记发表啦</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-12T21:39:08+08:00" pubdate data-updated="true">Nov 12<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/11/12/yes-we-publish-it/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>还记得7月份我们跑去土耳其玩了吗？拖了几个月，林太终于把游记给发表了，这样的话，我们也可以小补充回些成本。不多说，上图。</p>
+
+<ul class="gallery">
+<li><a href="https://farm9.staticflickr.com/8061/8178039033_35f3edb867_h.jpg" class="fancybox" rel="gallery-0f118ab204fa32fee4221c9d33b591be" title="这里就是传说中的cave hotel"><img src="https://farm9.staticflickr.com/8061/8178039033_eb58da2fd8_m.jpg" alt="这里就是传说中的cave hotel" /></a></li><li><a href="https://farm9.staticflickr.com/8482/8178068704_2d74714803_h.jpg" class="fancybox" rel="gallery-0f118ab204fa32fee4221c9d33b591be" title="皇宫老奢侈了"><img src="https://farm9.staticflickr.com/8482/8178068704_40e6a02f79_m.jpg" alt="皇宫老奢侈了" /></a></li><li><a href="https://farm9.staticflickr.com/8201/8178068596_88a602d932_h.jpg" class="fancybox" rel="gallery-0f118ab204fa32fee4221c9d33b591be" title=""><img src="http://farm9.staticflickr.com/8201/8178068596_00110e590e_m.jpg" alt="" /></a></li><li><a href="https://farm9.staticflickr.com/8060/8178069062_f834e295ce_h.jpg" class="fancybox" rel="gallery-0f118ab204fa32fee4221c9d33b591be" title="热气球是必不可少的"><img src="https://farm9.staticflickr.com/8060/8178069062_67071275f3_m.jpg" alt="热气球是必不可少的" /></a></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/4/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/2/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Us</h1>
+<p>My wife <a href="http://twitter.com/sourrabbit">@sourrabbit</a> and I <a href="http://twitter.com/linpx">@linpx</a> are the only authors contributing to this blog. We believe life is a book, from which all those good and bad, happy and sad things are written. We commit to keep this blog up, for the memories of the past as well as the colors in our life.<a href="http://www.colors4.us/about-us/index.html">&#8230;</a></p>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/03/17/a-new-journey/">新的旅程</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/16/nights-before-leaving-korea/">离开韩国前夕</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/14/re-rent/">再搬家</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/12/say-goodbye-to-my-wisdom-teeth/">致我终将逝去的智齿们</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/25/a-life-of-ease-and-comfort-in-taiwan/">停留在台湾的小安逸</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("linpx", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/linpx" class="twitter-follow-button" data-show-count="false">Follow @linpx</a>
+  
+</section>
+
+
+
+
+<section>
+ <h1>Categories</h1>
+ <ul id="categories">
+ <li class='category'><a href='http://colors4.us/blog/categories/computer/'>computer (23)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/connect/'>connect (1)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/dream/'>dream (2)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/exam/'>exam (4)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/job/'>job (6)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/jokes/'>jokes (32)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/korea/'>korea (34)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/life/'>life (156)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/miscellaneous/'>miscellaneous (5)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/movie/'>movie (13)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/octopress/'>octopress (11)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/photo/'>photo (34)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/rabbit/'>rabbit (10)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/reading/'>reading (6)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/society/'>society (17)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/sourrabbit/'>sourrabbit (4)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/thoughts/'>thoughts (5)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/travel/'>travel (16)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/xp/'>xp (12)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/旧闻/'>旧闻 (2)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/爱好/'>爱好 (2)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/话/'>话 (1)</a></li>
+
+ </ul>
+</section>
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Dong Ping; Lin Pengxuan -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'linpx';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

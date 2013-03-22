@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>韩版三星Galaxy S2固件升级记 - sourrabbit & linpx</title>
+  <meta name="author" content="Dong Ping; Lin Pengxuan">
+
+  
+  <meta name="description" content="前因 iPhone4s用久了，有些疲劳。刚好手中有部去年购入的Samsung Galaxy
+SII，就打算换着用上一段时间。这部安卓手机的固件还是2.3.4，捉摸着把固件给升了再使用。这一捉摸就是一礼拜。 网上不是说了吗？苹果手机都等着越狱，安卓手机都等着刷固件。这话通俗得已经开始暗示刷机的容易了 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://linpengxuan.github.com/newwebsite/blog/2012/07/29/upgrade-my-samsung">
+//  <link href="/favicon.png" rel="icon">
+<link href="http://colors4.us/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/linpx_sourrabbit_rss" rel="alternate" title="sourrabbit & linpx" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Ruge+Boogie|Ruthie|Flavors|Rancho|Galdeano' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Philosopher:[object Object],[object Object],[object Object],[object Object]' rel='stylesheet' type='text/css'>
+
+
+<!-- Load jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery.noConflict(); // ender.js conflicts with jQuery
+</script>
+
+<!-- Load FancyBox -->
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" />
+<script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+
+<!-- Custom Scripts -->
+<script language="Javascript" type="text/javascript">
+    // ender.js gobbles jQuery's ready event: Use ender.js $ instead
+    $(document).ready(function() {
+        jQuery(".fancybox").fancybox();
+    });
+</script>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-28584476-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">sourrabbit & linpx</a></h1>
+  
+    <h2>a blog for the colors in our life</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/linpx_sourrabbit_rss" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:linpengxuan.github.com/newwebsite" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="http://www.flickr.com/photos/pennyg/sets">Photos</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">韩版三星Galaxy S2固件升级记</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-29T21:37:41+08:00" pubdate data-updated="true">Jul 29<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h4>前因</h4>
+
+<p>iPhone4s用久了，有些疲劳。刚好手中有部去年购入的Samsung Galaxy
+SII，就打算换着用上一段时间。这部安卓手机的固件还是2.3.4，捉摸着把固件给升了再使用。这一捉摸就是一礼拜。</p>
+
+<p>网上不是说了吗？苹果手机都等着越狱，安卓手机都等着刷固件。这话通俗得已经开始暗示刷机的容易了。于是，我就上了机锋论坛。到那就傻眼了，整屏整屏的固件，我都不知道该如何下手。更搞的是，他们给出了固件，却没有明确给出相应固件的使用方法，原谅我的这个评论，这是我当时的想法。作为08年末就开始使用摩托milestone的用户来看，刷固件的前提是保证不变砖，很遗憾，在很多帖子上，我无法确定这个地方。</p>
+
+<p>照理，既然国内论坛不明确，我就直接上最新的Cyanogenmod
+9固件。稍微搜索了下，结果也碰壁了，我这款型号叫SHW-M250K的韩版盖世兔还相当搞。我简单列几点：</p>
+
+<p>*. 要用最新的CM9固件，先得升到ICS.这不是扯淡吗？我就是为了升这个才来的；</p>
+
+<p>*. Official CyanogenMod support is for ONLY for the International
+Version(GT-I9100), Bell Galaxy S II (GT-I9100M), and Telcel Galaxy S II
+(GT-I9100T), NOT any other Samsung Galaxy S II
+variant.这句话一上来我就不踏实，到底会不会把韩版变砖头呢？</p>
+
+<p>后来一横心，变砖就变砖吧。即使这样，在恢复模式中还是无法刷入固件。</p>
+
+<h4>解决</h4>
+
+<p>到解决的这一步时，我已经杀死无数的脑细胞。手机因为刷固件次数过多，已经用着一个不知从何处整来的固件。如果不能顺利升入版本，我貌似也就没有再使用的冲动，所以必须上CM9。我在中英文论坛上无法解决的问题，在稍微进行下头脑风暴就觉得能在韩国论坛上找到答案。果然。下面所说的升固件的手段就是从<a href="http://lhc368.blog.me/60160952763">韩国博客</a>上考下来的。作为韩版升级CM固件，是个很好的参考。</p>
+
+<p>我先说思路。恢复模式中升级CM固件无法成功的原因时没有通过认证，韩版的型号是SHW-M250K，CM固件可用的所有的型号均是I9100或I9100T等变体。我们需要做的就是将下载的固件型号在里面的某些类似于ini文件中修改即可。</p>
+
+<p>需要如下文件:</p>
+
+<p>*. 韩版手机一台，型号为SHW-M250K/S/L;</p>
+
+<p>*. <a href="http://download.cyanogenmod.com/?device=galaxys2&amp;type=nightly">此处下的CM9 nightly固件</a>;</p>
+
+<p>*. <a href="http://www.acrosoft.pe.kr/board/60677">此处下载AcroEdit</a>用于修改固件对应的手机型号;</p>
+
+<p>方法如下：</p>
+
+<ol>
+<li><p>用压缩文件打开固件文件，提取固件(我下载的为:cm-9-20120728-NIGHTLY-galaxy2.zip)中的<code>/META-INF/com/google/android/</code>中的updater-script和<code>system</code>中的build.prop文件置于桌面。</p></li>
+<li><p>用AcroEdit分别打开两个文件，将其中的GT-I9100*全部换成SHW-M250K.一共替换十处。换好后，在AcroEdit中存盘，将两个文件通过压缩程序放回原位置，覆盖原有的文件。
+<img src="http://farm8.staticflickr.com/7260/7668410176_9bfdd5d4be.jpg" alt="" />
+<img src="http://farm9.staticflickr.com/8424/7668410222_8906981ab7_z.jpg" alt="" />
+<img src="http://farm9.staticflickr.com/8022/7668410804_b5fbba1672_b.jpg" alt="" /></p></li>
+<li><p>然后将该文件考入手机SD卡根目录，就可以正常的通过恢复模式刷固件了。三星进入恢复模式的方式为：音量键+Home键+开关。进入后，选择<code>install
+zip from sdcard</code>，选好刚才考入的zip固件就可以update。完了记得来个factory reset就没问题了。</p></li>
+</ol>
+
+
+<h4>注意</h4>
+
+<p>*. 只要是刷机就有风险，三星的质保肯定就没有的了。</p>
+
+<p>*. 这次刷机完之后，下次再刷其他固件就不用再改了，机子实质上已经变成了一台无锁的国际版。也就是随便刷。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">linpx</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-29T21:37:41+08:00" pubdate data-updated="true">Jul 29<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/computer/'>computer</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://linpengxuan.github.com/newwebsite/blog/2012/07/29/upgrade-my-samsung/" data-via="linpx" data-counturl="http://linpengxuan.github.com/newwebsite/blog/2012/07/29/upgrade-my-samsung/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/07/25/exam-sum/" title="Previous Post: 考试小结">&laquo; 考试小结</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/08/05/turkey-travel/" title="next Post: 林先生的土耳其游后小结">林先生的土耳其游后小结 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Us</h1>
+<p>My wife <a href="http://twitter.com/sourrabbit">@sourrabbit</a> and I <a href="http://twitter.com/linpx">@linpx</a> are the only authors contributing to this blog. We believe life is a book, from which all those good and bad, happy and sad things are written. We commit to keep this blog up, for the memories of the past as well as the colors in our life.<a href="http://www.colors4.us/about-us/index.html">...</a></p>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/03/17/a-new-journey/">新的旅程</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/16/nights-before-leaving-korea/">离开韩国前夕</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/14/re-rent/">再搬家</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/12/say-goodbye-to-my-wisdom-teeth/">致我终将逝去的智齿们</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/25/a-life-of-ease-and-comfort-in-taiwan/">停留在台湾的小安逸</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("linpx", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/linpx" class="twitter-follow-button" data-show-count="false">Follow @linpx</a>
+  
+</section>
+
+<section>
+ <h1>Categories</h1>
+ <ul id="categories">
+ <li class='category'><a href='http://colors4.us/blog/categories/computer/'>computer (23)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/connect/'>connect (1)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/dream/'>dream (2)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/exam/'>exam (4)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/job/'>job (6)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/jokes/'>jokes (32)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/korea/'>korea (34)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/life/'>life (156)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/miscellaneous/'>miscellaneous (5)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/movie/'>movie (13)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/octopress/'>octopress (11)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/photo/'>photo (34)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/rabbit/'>rabbit (10)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/reading/'>reading (6)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/society/'>society (17)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/sourrabbit/'>sourrabbit (4)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/thoughts/'>thoughts (5)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/travel/'>travel (16)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/xp/'>xp (12)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/旧闻/'>旧闻 (2)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/爱好/'>爱好 (2)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/话/'>话 (1)</a></li>
+
+ </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Dong Ping; Lin Pengxuan -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'linpx';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://linpengxuan.github.com/newwebsite/blog/2012/07/29/upgrade-my-samsung/';
+        var disqus_url = 'http://linpengxuan.github.com/newwebsite/blog/2012/07/29/upgrade-my-samsung/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

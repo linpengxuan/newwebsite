@@ -1,0 +1,512 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>更换服务器后的Octopress设置 - sourrabbit & linpx</title>
+  <meta name="author" content="Dong Ping; Lin Pengxuan">
+
+  
+  <meta name="description" content="每隔一段时间，我总会有些东西跳出来。事情是这样的，公司里面有道防火墙，屏蔽了Gmail。If there are something to be
+got rid of my computer, I am quite positive the services from google would &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://linpengxuan.github.com/newwebsite/blog/2012/03/18/renew-setting-for-octopress">
+//  <link href="/favicon.png" rel="icon">
+<link href="http://colors4.us/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/linpx_sourrabbit_rss" rel="alternate" title="sourrabbit & linpx" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Ruge+Boogie|Ruthie|Flavors|Rancho|Galdeano' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Philosopher:[object Object],[object Object],[object Object],[object Object]' rel='stylesheet' type='text/css'>
+
+
+<!-- Load jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery.noConflict(); // ender.js conflicts with jQuery
+</script>
+
+<!-- Load FancyBox -->
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" />
+<script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+
+<!-- Custom Scripts -->
+<script language="Javascript" type="text/javascript">
+    // ender.js gobbles jQuery's ready event: Use ender.js $ instead
+    $(document).ready(function() {
+        jQuery(".fancybox").fancybox();
+    });
+</script>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-28584476-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">sourrabbit & linpx</a></h1>
+  
+    <h2>a blog for the colors in our life</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/linpx_sourrabbit_rss" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:linpengxuan.github.com/newwebsite" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="http://www.flickr.com/photos/pennyg/sets">Photos</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">更换服务器后的Octopress设置</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-18T18:02:46+08:00" pubdate data-updated="true">Mar 18<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>每隔一段时间，我总会有些东西跳出来。事情是这样的，公司里面有道防火墙，屏蔽了Gmail。If there are something to be
+got rid of my computer, I am quite positive the services from google would
+the last one on my list. 于是我就用了翻墙软件来上Gmail，很讽刺，是吗？在肉身翻墙之后。。。</p>
+
+<p>之前购买的VPS服务也许是因为我设置的邮件发布octopress的ruby程序，一个月内服务过载警告2次。于是我开始考虑转换一个<a href="http://newwebsite.com">服务器</a>。</p>
+
+<!--more-->
+
+
+<h5>概要，目的</h5>
+
+<ol>
+<li>我想实现和现在VPS一样的功能；</li>
+<li>改善邮件发送功能。以前是使用cron定时器，每隔一定时间的运行，被动检查是否有新博客。我希望改善博客的发布功能；</li>
+<li>VPN，SSH功能正常。</li>
+</ol>
+
+
+<h4>服务器设置</h4>
+
+<p>我从<a href="http://blog.s135.com/pptp_vpn/">这儿</a>可以设置好在CentOS上的VPN。</p>
+
+<p>然后设置LNMP，因为我有了512MB的内存。</p>
+
+<p>设置好新服务器的rvm环境和ruby。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#安装git
+</span><span class='line'>yum install zlib-devel openssl-devel perl cpio
+</span><span class='line'>expat-devel gettext-devel autoconf
+</span><span class='line'>wget
+</span><span class='line'>http://www.codemonkey.org.uk/projects/git-snapshots/git/git-latest.tar.gz
+</span><span class='line'>tar xzvf git-latest.tar.gz
+</span><span class='line'>cd git-{date}   #进入git的文件夹
+</span><span class='line'>autoconf
+</span><span class='line'>./configure --with-curl=/usr/local
+</span><span class='line'>make & make install
+</span><span class='line'>#安装RVM
+</span><span class='line'>yum install git git-core git-gui git-doc curl gcc build-essential
+</span><span class='line'>groupadd rvm
+</span><span class='line'>useradd -g rvm rvm
+</span><span class='line'>usermod -a -G rvm root
+</span><span class='line'>bash &lt; &lt;(curl -Lk
+</span><span class='line'>https://github.com/wayneeseguin/rvm/raw/1.3.0/contrib/install-system-wide)
+</span><span class='line'>echo '[[ -s "/usr/local/rvm/scripts/rvm" ]] && .
+</span><span class='line'>"/usr/local/rvm/scripts/rvm"' >> ~/.bash_profile
+</span><span class='line'>source ~/.bash_profile
+</span><span class='line'>rvm pkg install zlib openssl libcurl4-openssl-dev libssl-dev zlib1g-dev
+</span><span class='line'>libreadline5-dev
+</span><span class='line'>rvm install 1.9.2 -C --with-openssl-dir=$HOME/.rvm/usr
+</span><span class='line'>rvm --default use 1.9.2
+</span><span class='line'>gem install bundle
+</span><span class='line'>#继续octopress的配置,从github上恢复
+</span><span class='line'>cd /home/wwwroot
+</span><span class='line'>mkdir blog
+</span><span class='line'>cd blog
+</span><span class='line'>git init
+</span><span class='line'>git remote add origin.old git://github.com/linpengxuan/blog.git
+</span><span class='line'>git pull origin.old master
+</span><span class='line'>git remote add origin git@github.com:linpengxuan/xinboke.git ＃需要新建
+</span><span class='line'>git remote add live /home/wwwroot/octopress_blog.git; git pull live master;
+</span><span class='line'>git add .;git commit -m "aa";git push origin master
+</span><span class='line'>#设置VPS端的另一个octopress环境，用于自动rake generate
+</span><span class='line'>cd /home/wwwroot
+</span><span class='line'>mkdir octopress_blog.git && cd octopress_blog.git
+</span><span class='line'>git init --bare
+</span><span class='line'>git config core.bare false
+</span><span class='line'>git config core.worktree /home/wwwroot/blog
+</span><span class='line'>git config receive.denycurrentbranch ignore
+</span><span class='line'>vi hooks/post-receive
+</span><span class='line'>/bin/sh
+</span><span class='line'>GIT_WORK_TREE=/home/wwwroot/blog git checkout -f
+</span><span class='line'>cd /home/wwwroot/blog
+</span><span class='line'>bundle exec rake generate
+</span><span class='line'>chmod 755 hooks/post-receive
+</span><span class='line'>cd /home/wwwroot/blog
+</span><span class='line'>git remote add live /home/wwwroot/octopress_blog.git
+</span><span class='line'>
+</span><span class='line'>#设置jekyllmail
+</span><span class='line'>cd /home/wwwroot
+</span><span class='line'>mkdir jekyllmail;cd jekyllmail
+</span><span class='line'>git init
+</span><span class='line'>git remote add origin.old git:github.com/linpengxuan/JekyllMail.git
+</span><span class='line'>#设置脚本文件,设置根目录夹上aa.sh,内容如下
+</span><span class='line'>/bin/sh
+</span><span class='line'>cd /home/wwwroot/jekyllmail
+</span><span class='line'>export LC_CTYPE=en_US.UTF-8
+</span><span class='line'>export LANG=en_US.UTF-8
+</span><span class='line'>ruby jekyllmail.rb
+</span><span class='line'>cd /home/wwwroot/blog
+</span><span class='line'>git add .
+</span><span class='line'>git commit -m "aa"
+</span><span class='line'>git push live master</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>实际操作</h4>
+
+<p>每当我需要更新博文的时候，用邮件发送博文后，我会登录服务器运行<code>./aa.sh</code>,然后在有博文时，会自动<code>rake
+generate</code>；在没有博文时，就保持原样。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">linpx</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-18T18:02:46+08:00" pubdate data-updated="true">Mar 18<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/computer/'>computer</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://linpengxuan.github.com/newwebsite/blog/2012/03/18/renew-setting-for-octopress/" data-via="linpx" data-counturl="http://linpengxuan.github.com/newwebsite/blog/2012/03/18/renew-setting-for-octopress/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/02/21/after-moving/" title="Previous Post: 搬家记2.0版">&laquo; 搬家记2.0版</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/03/20/words-for-the-1st-day-of-2nd-year/" title="next Post: 写在第二年的第一天">写在第二年的第一天 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Us</h1>
+<p>My wife <a href="http://twitter.com/sourrabbit">@sourrabbit</a> and I <a href="http://twitter.com/linpx">@linpx</a> are the only authors contributing to this blog. We believe life is a book, from which all those good and bad, happy and sad things are written. We commit to keep this blog up, for the memories of the past as well as the colors in our life.<a href="http://www.colors4.us/about-us/index.html">...</a></p>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/03/17/a-new-journey/">新的旅程</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/16/nights-before-leaving-korea/">离开韩国前夕</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/14/re-rent/">再搬家</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/12/say-goodbye-to-my-wisdom-teeth/">致我终将逝去的智齿们</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/25/a-life-of-ease-and-comfort-in-taiwan/">停留在台湾的小安逸</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("linpx", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/linpx" class="twitter-follow-button" data-show-count="false">Follow @linpx</a>
+  
+</section>
+
+<section>
+ <h1>Categories</h1>
+ <ul id="categories">
+ <li class='category'><a href='http://colors4.us/blog/categories/computer/'>computer (23)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/connect/'>connect (1)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/dream/'>dream (2)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/exam/'>exam (4)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/job/'>job (6)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/jokes/'>jokes (32)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/korea/'>korea (34)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/life/'>life (156)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/miscellaneous/'>miscellaneous (5)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/movie/'>movie (13)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/octopress/'>octopress (11)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/photo/'>photo (34)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/rabbit/'>rabbit (10)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/reading/'>reading (6)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/society/'>society (17)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/sourrabbit/'>sourrabbit (4)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/thoughts/'>thoughts (5)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/travel/'>travel (16)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/xp/'>xp (12)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/旧闻/'>旧闻 (2)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/爱好/'>爱好 (2)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/话/'>话 (1)</a></li>
+
+ </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Dong Ping; Lin Pengxuan -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'linpx';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://linpengxuan.github.com/newwebsite/blog/2012/03/18/renew-setting-for-octopress/';
+        var disqus_url = 'http://linpengxuan.github.com/newwebsite/blog/2012/03/18/renew-setting-for-octopress/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

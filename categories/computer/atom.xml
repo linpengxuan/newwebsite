@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: computer | sourrabbit & linpx]]></title>
+  <link href="http://linpengxuan.github.com/newwebsite/blog/categories/computer/atom.xml" rel="self"/>
+  <link href="http://linpengxuan.github.com/newwebsite/"/>
+  <updated>2013-03-22T16:52:53+08:00</updated>
+  <id>http://linpengxuan.github.com/newwebsite/</id>
+  <author>
+    <name><![CDATA[Dong Ping; Lin Pengxuan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Asus RT-AC66U开箱，使用，把玩（二）]]></title>
+    <link href="http://linpengxuan.github.com/newwebsite/blog/2012/12/08/asus-rt-ac66u-review/"/>
+    <updated>2012-12-08T14:32:42+08:00</updated>
+    <id>http://linpengxuan.github.com/newwebsite/blog/2012/12/08/asus-rt-ac66u-review</id>
+    <content type="html"><![CDATA[<p>网购的<a href="http://www.asus.com/Networks/Wireless_Routers/RTAC66U/">Asus RT-AC66U</a>
+总算在热切的期盼中到达了。花钱和浪费时间一样，负疚和犯罪感一样会同时出现。刚开始只是想搭车黑五，然后就出手了台比在韩国手机套餐还便宜的x230，之后考虑家里的网速，就问自己是不是再出手个路由器。你看，我就是这样一步步掉入这样商业社会的陷阱中去的，不要学啊。</p>
+
+<p><img src="http://farm9.staticflickr.com/8503/8254405262_8cd4a943e4_z.jpg" alt="" /></p>
+
+<p>也可能是我要求不多，用下来感觉这个路由器实在是过于强大了。原本还打算开着原来的老笔记本做个NAS，现在连这个都省了。用路由器挂着硬盘来下载。速度也很满意。<!--more--></p>
+
+<ol>
+<li>双频2,4Ghz和5Ghz是可以同时开启。5Ghz的频道，我手里的Galaxy S3和林太的iPad
+mini都可以连的上，speedtest的速度因为干扰少的原因，表现很好；</li>
+<li>诚如包装盒所述，video
+streaming能力极强。一天多用下来，在家里的网内登录路由器上的USB硬盘的电影，完全没有停顿。甚至下载过程当中，直接就可以看已下载好的部分。</li>
+<li>外形漂亮。确实漂亮。
+4.ASUS的软件支援很到位。支持安卓和iOS系统的APP。我用手机的4G网络都可以远程登录我的路由器，通过APP可以分享出USB硬盘文件的链接，对，就如dropbox的public文件夹一般，唯一区别在于大小无限制。ASUS起了个不错的名字,Aicloud.</li>
+<li>扩展性不错。当然，想TOMATO，dd-wrt还是没有支持，不过我通过安装原生系统修改的固件<a href="https://github.com/RMerl/asuswrt-merlin/wiki/About-Asuswrt">asuswrt-merlin</a>,安装花了我不少心思。下文会详述。</li>
+</ol>
+
+
+<p><img src="http://farm9.staticflickr.com/8061/8253331499_16957f4bb1_z.jpg" alt="" /></p>
+
+<h4>路由器调整</h4>
+
+<p>1.在前述的asuswrt-merlin地址上下载最新的固件，用和正常的华硕升固件的方式刷入即可。据作者介绍，该固件开发时，也得到华硕官方的帮助，他觉得华硕在这上面做的很棒。
+2. 我比较过路由器在设置了密码前后的速度区别。还是显著到我需要烦恼的地步，还是沿用了原来的老方法，不设密码，但是设mac filter list。这样只有我认可的mac地址的网卡才能接入网络。本身网络也没有啥贵重的东西，这样很合适。
+3.华硕路由器官方出来的时候，就已经是内置了下载大师了，可以搞定ED2K，BT等链接。不过对我们来说，用习惯了迅雷的离线下载，其他直接无爱。路由器内部必须要先设置好下载环境，才好开始用。我绕路了，浪费了不少时间，索性就将tip直接说出，大伙也节省些时间。</p>
+
+<h4>路由器下载环境设置</h4>
+
+<p>首先，不要使用路由器界面tools下的run-cmd,曾经有一段时间我以为这就是终端操作的地方，我错了，在发现错误之前，时间已经过去2个小时，没错，有些小笨。第二，merlin说要用telnet登录，如果你不知道如何用telnet登录，那你也别折腾了。我确实不会telnet登录，但是你要是会ssh登录也是一样的。但是登录之前也要打开，在administration-system标签下开启。我原来竟是没有找到。ssh登录后，之后按照<a href="https://github.com/RMerl/asuswrt-merlin/wiki/Initialize-OPTWARE">这里的指示</a>安装即可。我的理解是就是在连接的usb盘上创建一个linux的工作环境，可以安装必要的下载工具，比如aria2c或是wget，以及迅雷（当然，看完下一段的介绍后，其实只要安装aria2c就可以了）。</p>
+
+<h4>全新的下载方式</h4>
+
+<p>使用<a href="http://blog.binux.me/ThunderLixianExporter/">ThunderLixianExporter</a>,将书签拖到地址栏中，进入自己的离线下载页面后，点击书签在出现取回本地的按钮中选择aria2.选择弹出框中的链接，一般情况下直接就可以进行下载了。我的情况比较特殊，需要在末尾加上--event-poll=select。</p>
+
+<p>速度稳定在3M/s到5M/s之间，作为路由器附属的硬盘，我对这个速度相当满意了。以后，即时不在家里，远程登录上路由器，下个命令，到家打开电视就可以看了。确实很方便。</p>
+
+<p><img src="http://farm9.staticflickr.com/8353/8254406824_85593192e1_z.jpg" alt="" /></p>
+
+<p>如果这种方式可以证明相当稳定的话，我想以后可能就不需要用<a href="http://martianz.cn/fakethunder/">fakeThunder</a>（非mac系统无法使用），或是linux下的<a href="https://github.com/iambus/xunlei-lixian">xunlei lixian</a>（我发现在路由器中下载的速度波幅太大）。</p>
+
+<p>最后值得一提的是，批量下载时通过aria2c的文件命令输一次就OK了，配合上screen命令，在终端窗口输出后，直接关上就完事，不要太方便。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Thinkpad X230入手报告(一)]]></title>
+    <link href="http://linpengxuan.github.com/newwebsite/blog/2012/12/05/thinkpad-x230/"/>
+    <updated>2012-12-05T22:23:53+08:00</updated>
+    <id>http://linpengxuan.github.com/newwebsite/blog/2012/12/05/thinkpad-x230</id>
+    <content type="html"><![CDATA[<p>昨天上午2012-12-04拿到了上个月20日下单的Lenovo Thinkpad
+x230。心情一阵激动，整得我一天下来心思都放在新的电脑上，即时中午午休的一段时间都会偷偷将笔记本拿出把玩，全然忘记美式插头在首尔无法直接使用的事实。晚上到家亦是如此，一门心思放到新机上，每天的爬楼梯和减腹运动就放下了。恩，我还是有热情的。</p>
+
+<p><img src="http://farm9.staticflickr.com/8483/8246311115_1393ea0198_z.jpg" alt="" /></p>
+
+<h4>关于windows 8</h4>
+
+<p>第一次开机之后，我对win8的感觉就是惊艳，因为我一直用于xp的缘故。当然和mac系统还是有差距的，这个我直接忽略过去。系统画面漂亮了，当然喜欢用的人就多了。不过，稍微用久些就觉得自己的眼睛撑不住了。这和笔记本有关，x230是12.5寸的屏幕，分辨率上到了1366x768，字体精细比我09年的MBP上了个台阶，也带来了字体过小的问题。一句话，看久了眼睛累。我一发现问题，肯定就是要解决问题的。我第一个就想到了安装linux。windows我除了打算用于玩文明之外，竟然没有想到任何其他的用处。</p>
+
+<h4>tag:x230, UEFI, dual boot, linux mint</h4>
+
+<p>每隔一段时间，硬件商都会弄出一些大伙无法理解东西出来，比如这个UEFI，于是x230里安装的windows 8启动时，就不再按以前惯有的bios
+legacy方式了。好处我不知道，坏处是类似x230机主如我在安装linux时，未经设置的系统只能在legacy方式启动，很困惑，要么就只支持win
+8，要不就linux。电脑收拾洁癖的人是绝对无法忍受这样的方式，我就踏上了征程。这里只给出结果，但是达到满意结果之前呢，足足浪费了不少时间。</p>
+
+<ol>
+<li>正常安装win 8；</li>
+<li>bios切换legacy启动；正常usb安装linux mint 64bit，结束时选择continue test，不要reboot；</li>
+<li>参照<a href="https://help.ubuntu.com/community/Boot-Repair">这里</a>，安装boot-repair；在advanced
+option的GRUB LOCATION标签下设置后apply即可。</li>
+<li>将bios中的legacy模式调回UEFI启动后，极有可能win
+8就无法正常启动了，进入系统恢复中的盘符输入如下内容修复windows启动的mbr或gpt
+whatever，事实是我到现在还搞不清存这些东西，不过结果还是令人满意的。<code>bootrec.exe /fixboot;bootrec.exe
+/fixmbr</code>。</li>
+</ol>
+
+
+<p><img src="http://farm9.staticflickr.com/8068/8246390117_ce49971126_z.jpg" alt="" /></p>
+
+<h4>linux里的一些小细节</h4>
+
+<p>我在6年前曾经用了一年的linux，那时的一大爱好就是跑到<a href="http://www.distrowatch.com">distrowatch</a>上每隔一两天换着法子装新系统玩，虽然都是大同小异，还是让人热在其中，相信我，如我般的linux初学者不少。gentoo的ebuild折腾到我吐血的情景一下就历历在目起来。前一段登上去看了，原来用过的老版本都纷纷在version道路上升级着，居然冒出了个新成员：linux
+mint，把ubuntu打下，自己排到第一，就凭这个，我就想装来看看。果然linux mint是一个非常成熟的<a href="http://www.omgubuntu.co.uk/2012/11/linux-mint-14-with-cinnamon-desktop-review">系统</a>。</p>
+
+<p>第一个就是安装拼音输入法。以前linux系统里的拼音极度不稳定，一下有用一下没用的，现在这个情况被改变了。<code>sudo apt-get install
+ibus ibus-pinyin</code></p>
+
+<p>其他的暂时先不多说，会继续写下去，当然，得等到我拿到我的256gb Crucial mSATA SSD和16gb内存条以后。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[在octopress上引入相片流]]></title>
+    <link href="http://linpengxuan.github.com/newwebsite/blog/2012/11/10/photostream-in-octopress/"/>
+    <updated>2012-11-10T22:53:26+08:00</updated>
+    <id>http://linpengxuan.github.com/newwebsite/blog/2012/11/10/photostream-in-octopress</id>
+    <content type="html"><![CDATA[<p>我一直很想在博客上能够多一项小功能，就是照片流。这样我就可以把flickr上的照片一连串的全部共享出来，或者有次出行了，拍了些照片，只要把博文地址微博给朋友，就可以上来浏览了。没错，就是和以前msn博客上的相册是一个道理。只是换到了octopress后，这些都得自己动手整。很繁琐，不过弄好了的话，还是有成就感的。</p>
+
+<h4>设立相册的可能性</h4>
+
+<p>当然是可能的了，要不这篇博客就没有意义了。</p>
+
+<p>我本人是不会任何编程，也不是学计算机的，所以很多时候，我知道这样去尝试可能可以，至于要问我为什么可以，对不起，实际上我这里给出的编码啥意思，自己也不明白。只要能得到想要的结果，知其然而不知其所以然，也挺好，不是？</p>
+
+<p>我这里引用的代码是<a href="http://fancyapps.com/fancybox/">fancybox</a>,做好后会有这样的<a href="http://fancyapps.com/fancybox/demo/">效果</a>。很显然，对于一个超小众的octopress博客平台来说，想使用另一个超小众的的相片流代码，一定得找成功的先例。实际上，平台比较出名的<a href="http://zespia.tw/Octopress-Theme-Slash/">slash主题</a>已经支持了fancybox，不过并未给出如何设置。于是，我找到了这篇文章<a href="http://tritarget.org/blog/2012/05/07/integrating-photos-into-octopress-using-fancybox-and-plugin/">Integrating Photos Into OctoPress Using FancyBox and Plugin</a>。写得非常好，以至于我在第一次rake generate就成功了，而并未出现我期待的解析错误。<!--more--></p>
+
+<h4>操作步骤</h4>
+
+<p>我这里就直接给从操作步骤了，想要理解为何的同学，还是移步到<a href="http://tritarget.org/blog/2012/05/07/integrating-photos-into-octopress-using-fancybox-and-plugin/">引文链接</a>去看看吧。</p>
+
+<p><strong>第一步</strong>，把<code>photos_tag.rb</code><a href="https://gist.github.com/2631877">文件</a>放到<code>plugins/</code>文件夹去。
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://gist.github.com/2631877.git  #文件在2631877文件夹中</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><strong>第二步</strong>，在<code>source/_includes/custom/head.html</code> 文件底部加入如下内容
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;!-- Load jQuery -->
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript">&lt;/script>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;script type="text/javascript">
+</span><span class='line'>    jQuery.noConflict(); // ender.js conflicts with jQuery
+</span><span class='line'>&lt;/script>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;!-- Load FancyBox -->
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;p>&lt;link rel="stylesheet" href="http://linpengxuan.github.com/newwebsite/fancybox/jquery.fancybox.css" />&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;script src="http://linpengxuan.github.com/newwebsite/fancybox/jquery.fancybox.pack.js" type="text/javascript">&lt;/script>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;p>&lt;!-- Fix FancyBox style for OctoPress -->
+</span><span class='line'>&lt;style type="text/css">
+</span><span class='line'>  .fancybox-wrap { position: fixed !important; }
+</span><span class='line'>  .fancybox-opened {
+</span><span class='line'>    -webkit-border-radius: 4px !important;
+</span><span class='line'>       -moz-border-radius: 4px !important;
+</span><span class='line'>            border-radius: 4px !important;
+</span><span class='line'>  }
+</span><span class='line'>  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+</span><span class='line'>    background-color: transparent !important;
+</span><span class='line'>    border: 0 !important;
+</span><span class='line'>  }
+</span><span class='line'>&lt;/style>
+</span><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;!-- Custom Scripts -->
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;script language="Javascript" type="text/javascript">
+</span><span class='line'>    // ender.js gobbles jQuery's ready event: Use ender.js $ instead
+</span><span class='line'>    $(document).ready(function() {
+</span><span class='line'>        jQuery(".fancybox").fancybox();
+</span><span class='line'>    });
+</span><span class='line'>&lt;/script>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><strong>第三步</strong>， 在<code>sass/custom/_styles.scss</code>追加如下内容
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/&lt;em> FancyBox Galleries &lt;/em>/
+</span><span class='line'>$rad: 6px;
+</span><span class='line'>ul.gallery {
+</span><span class='line'>  border: thin solid gray;
+</span><span class='line'>  -webkit-border-radius: $rad;
+</span><span class='line'>  -moz-border-radius: $rad;
+</span><span class='line'>  border-radius: $rad;
+</span><span class='line'>  text-align: center;
+</span><span class='line'>  padding: 5px;
+</span><span class='line'>  li {&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>display: inline;
+</span><span class='line'>padding: 5px;
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><strong>第四步</strong>，从这里开始就是微调了。如果看过原文的话，会发现相册流是不直接支持flickr的网址的，任何网址在使用时，都会在前方默认加上网站地址，我的情况是，会出现诸如<code>http://colors4.us/farm9.staticflickr.com...</code>等没有意义的网址。这一步的解决方法，对我来说可以用，但不完美，我个人妥协了。可以在<code>_config.yml</code>中加入如下内容：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>photos_prefix: https://farm</span></code></pre></td></tr></table></div></figure></notextile></div>
+<strike>这样做就如同设立了歌permlink一样，规定死了打头网址的内容，后面我们在博文中输入相册照片地址<code>http://farm9.staticflickr.com/8198/8171602168_1788957e3c_m.jpg</code>时，只需输入<code>8198/8171602168_1788957e3c_m.jpg</code>即可。</strike></p>
+
+<p><strike>但是如果常用flickr的朋友就会发现，这里有个前提，就是所有的相片的网址，都必须在<code>farm9</code>这个网址段上。我个人来说，使用时间够长，我照片网址从<code>farm1</code>到<code>farm9</code>都有，设死了的话就没有办法套用其他网址段的照片了。我做了很多次试验，发现只要后面那段数字正确，前面的网址段变化的数字不会产生影响，或者直接说<code>http://farm9.staticflickr.com/8198/8171602168_1788957e3c_m.jpg</code>等于<code>http://farm1.staticflickr.com/8198/8171602168_1788957e3c_m.jpg</code>。</strike></p>
+
+<p>其实我突然想到，这个flickr不同服务器的问题。实际上，我只需在_config.yml上登记<code>http://farm</code>即可，剩下在博文中输入<code>9.staticflickr.com/8198/817160...</code>即可完美解决该问题。这样的结果就是可以自由调整服务器的数字1~9，而不用担心会不会突然链接被重置。哈哈，我太厉害了。</p>
+
+<p><strong>第五步</strong>，这里介绍实例，请一定注意看井号后面的说明。如果只展示一张的话，可在博文中插入如下内容：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[% photo 9.staticflickr.com/8198/8171602168_1788957e3c_b.jpg default 这里输入照片的名字 %] #把句子前后的中括号改成大括号，因为它本身放入博文就可执行了</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>如果展示相册流的话，则插入如下内容：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[% gallery %] #把本行句子前后的中括号改成大括号
+</span><span class='line'>9.staticflickr.com/7120/7698203656_ae8ae99ed3_b.jpg: pic1      #thumb pic默认为7698203656_ae8ae99ed3_m.jpg，刚好和flickr对应
+</span><span class='line'>9.staticflickr.com/3504/3997360729_cdaf975b63_z.jpg[9.staticflickr.com/3504/3997360729_cdaf975b63_m.jpg]: pic2       #可以自己设定thumb pic置于中括号内
+</span><span class='line'>9.staticflickr.com/6182/6150404978_10c5d6b9c5_b.jpg: pic3
+</span><span class='line'>9.staticflickr.com/7278/7714113508_3c28b8eaa0_b.jpg:                      #可以不起名字，但是一定不能省略冒号
+</span><span class='line'>3.staticflickr.com/2511/3976228983_a670a644b4_o.jpg[3.staticflickr.com/2511/3976228983_5ef14d2ca5_m.jpg]: pic5
+</span><span class='line'>9.staticflickr.com/4142/4782988086_065998b9af_b.jpg: pic6
+</span><span class='line'>[% endgallery %] #把本行句子前后的中括号改成大括号</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h4>演示</h4>
+
+<p>我这里就先演示一下fancybox相片流的效果吧。</p>
+
+<p><a href="https://farm9.staticflickr.com/8198/8171602168_1788957e3c_b.jpg" class="fancybox" title="这里输入照片的名字 "><img src="https://farm9.staticflickr.com/8198/8171602168_1788957e3c_m.jpg" alt="这里输入照片的名字 " /></a></p>
+
+<hr />
+
+<p><ul class="gallery">
+<li><a href="https://farm9.staticflickr.com/7120/7698203656_ae8ae99ed3_b.jpg" class="fancybox" rel="gallery-4bad6f1035047845e295c0ab1239aa18" title="这里起名字"><img src="https://farm9.staticflickr.com/7120/7698203656_ae8ae99ed3_m.jpg" alt="这里起名字" /></a></li><li><a href="https://farm4.staticflickr.com/3504/3997360729_cdaf975b63_z.jpg" class="fancybox" rel="gallery-4bad6f1035047845e295c0ab1239aa18" title="也可以不起名字"><img src="https://farm4.staticflickr.com/3504/3997360729_cdaf975b63_m.jpg" alt="也可以不起名字" /></a></li><li><a href="https://farm9.staticflickr.com/6182/6150404978_10c5d6b9c5_b.jpg" class="fancybox" rel="gallery-4bad6f1035047845e295c0ab1239aa18" title="起个喜欢的名字吧"><img src="https://farm9.staticflickr.com/6182/6150404978_10c5d6b9c5_m.jpg" alt="起个喜欢的名字吧" /></a></li><li><a href="https://farm9.staticflickr.com/7278/7714113508_3c28b8eaa0_b.jpg" class="fancybox" rel="gallery-4bad6f1035047845e295c0ab1239aa18" title="<br/>"><img src="https://farm9.staticflickr.com/7278/7714113508_3c28b8eaa0_m.jpg" alt="<br/>" /></a></li><li><a href="https://farm3.staticflickr.com/2511/3976228983_a670a644b4_o.jpg" class="fancybox" rel="gallery-4bad6f1035047845e295c0ab1239aa18" title="maybe an English one?"><img src="https://farm3.staticflickr.com/2511/3976228983_5ef14d2ca5_m.jpg" alt="maybe an English one?" /></a></li><li><a href="https://farm9.staticflickr.com/4142/4782988086_065998b9af_b.jpg" class="fancybox" rel="gallery-4bad6f1035047845e295c0ab1239aa18" title="haha"><img src="https://farm9.staticflickr.com/4142/4782988086_065998b9af_m.jpg" alt="haha" /></a></li>
+</ul></p>
+
+<p>我平常拍照不多，fancybox简单的功能刚好能满足我的需求。呵呵，不容易啊，上了octopress的船要想下，确实不容易啊，只能自己举着鞭子敲着自己了。:)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[我的移动数字音乐的选择]]></title>
+    <link href="http://linpengxuan.github.com/newwebsite/blog/2012/08/29/my-choice-for-mobile-music/"/>
+    <updated>2012-08-29T16:04:14+08:00</updated>
+    <id>http://linpengxuan.github.com/newwebsite/blog/2012/08/29/my-choice-for-mobile-music</id>
+    <content type="html"><![CDATA[<p>这篇文字本来想写条推的，无奈太长。要不就改写成长点的段落吧。</p>
+
+<p>关于数字音乐的折腾完全是最近我换回安卓手机开始的。先前三星S2手机享有无限3G数据流量的套餐，于是就开始考虑要不就听个数字音乐吧。之后刷机变砖后，我也很奇怪自己突然对安卓系统产生很大的好感，也就不再等待9月12号iPhone5的发布会，反倒又入了一只S3。5月份就出来的S3我起初并未有太多的感觉，只是一个评价，yet
+another Android phone.
+到要换手机的时候，上手一看，才觉得，三星现在智能手机市场占有率第一的名头还真不是吹的，要不咋说呢，韩国这儿的一个笑话就是，韩国人一生当中不可避免的三件事情是·出生，死亡和三星·。</p>
+
+<p>扯远了，话说我拿回S3之后，仅买了个2G的LTE数据流量，够贵的。用来直接听歌，肯定是不行的，于是很自然地选择的时候，一定要有offline的功能。离线数字音乐其实有两个选择，一个是直接下载到SD卡，一个是选择好的音乐电台。</p>
+
+<p>我的第一次尝试是买了64G的SD卡。我的消费思维属于一般人的那种，认为一次性的投资会比反复性的投资好些，即使要付更多的钱。有一点我忘记了，完全忽略了找歌的难度。咱们好歹也是工作的了，为了找些歌上到论坛，通过排着帖子说出多谢楼主回复后才能得到的下载链接耗时间获得的音乐实际上又不合法，又折腾人。结论是，卡白买了。先搁着吧。</p>
+
+<p>第二次尝试就是研究各家音乐提供功能的长短。第一个选择就是spotify，优点非常多。音质好，速度快。曲库全。缺点就是，离线同步特别慢，当然给定时间都会把事情办好。radio没有songza的好，playlist也许是我玩不转的原因吧，无法在不花太多时间的前提下找到我喜欢听的歌。第二个选择就是Rdio了，我尝试了它的trial。歌曲也都好，下载速度也ok，但是问题是打开下载的文件有时候会无法打开，或是放歌放到一半没声音，肯定无法忍受。</p>
+
+<p>所以之后有一段时间是听自己下的歌，然后又配合虾米。毕竟耳朵不是金子做的，很多音乐音质上还是听不大出来。</p>
+
+<p>然后今天看Flipboard时，说是google又把grooveshark放回到它的play
+store里去了。本着试试看的想法，就把grooveshark下载了。第一次看到这个程序就想起我以前学习韩语的美国室友Justin。他的HP电脑是成天都在放着这个的。那时候试着打开过，发现全是电子类的音乐，尝试去喜欢，失败了，删之。现在的grooveshark给出了和spotify类似的月费价格9美元，然后就可以无限制收听音乐。据我所知grooveshark的曲库上了4千万首，对比与spotify的1千6百万。当然，采取的机制是和虾米类似，用户可以选择自己上传音乐。曲库大是大，不过有法律问题，被唱片公司起诉，貌似现在仍在继续中。我的看法是，钱交了，就听吧，至于法律的问题，就留给公司解决，怎么样，想法是不是很中国。</p>
+
+<p>我发现了它几个优点。第一当然是曲库丰富。里面竟然有中文歌曲，还不少。连那英，左小诅咒的歌也有，至于我喜欢的soundtrack
+OST，spotify上没有找到的埃及王子，狮子王也都提供试听。第二就是可以离线下载，速度很很快。我目测会有spotify的5到6倍。第三是没有美国IP限制，其他大部分的音乐电台都有西方国家的IP限制，尽管限制移动app没有，但是想想还是很烦人。</p>
+
+<p>我先买了一个月的会员，如果好用，肯定要推荐。今天突然写这个的还有个原因就是，我的手机运营商KT提供了一个费用折扣的活动，加入后每个月可以打折10美金左右，于是就用省下的钱来整这个，挺好。</p>
+
+<p><img src="http://farm9.staticflickr.com/8322/7885939016_977643107f.jpg" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[韩版三星Galaxy S2固件升级记]]></title>
+    <link href="http://linpengxuan.github.com/newwebsite/blog/2012/07/29/upgrade-my-samsung/"/>
+    <updated>2012-07-29T21:37:41+08:00</updated>
+    <id>http://linpengxuan.github.com/newwebsite/blog/2012/07/29/upgrade-my-samsung</id>
+    <content type="html"><![CDATA[<h4>前因</h4>
+
+<p>iPhone4s用久了，有些疲劳。刚好手中有部去年购入的Samsung Galaxy
+SII，就打算换着用上一段时间。这部安卓手机的固件还是2.3.4，捉摸着把固件给升了再使用。这一捉摸就是一礼拜。</p>
+
+<p>网上不是说了吗？苹果手机都等着越狱，安卓手机都等着刷固件。这话通俗得已经开始暗示刷机的容易了。于是，我就上了机锋论坛。到那就傻眼了，整屏整屏的固件，我都不知道该如何下手。更搞的是，他们给出了固件，却没有明确给出相应固件的使用方法，原谅我的这个评论，这是我当时的想法。作为08年末就开始使用摩托milestone的用户来看，刷固件的前提是保证不变砖，很遗憾，在很多帖子上，我无法确定这个地方。</p>
+
+<p>照理，既然国内论坛不明确，我就直接上最新的Cyanogenmod
+9固件。稍微搜索了下，结果也碰壁了，我这款型号叫SHW-M250K的韩版盖世兔还相当搞。我简单列几点：</p>
+
+<p>*. 要用最新的CM9固件，先得升到ICS.这不是扯淡吗？我就是为了升这个才来的；</p>
+
+<p>*. Official CyanogenMod support is for ONLY for the International
+Version(GT-I9100), Bell Galaxy S II (GT-I9100M), and Telcel Galaxy S II
+(GT-I9100T), NOT any other Samsung Galaxy S II
+variant.这句话一上来我就不踏实，到底会不会把韩版变砖头呢？</p>
+
+<p>后来一横心，变砖就变砖吧。即使这样，在恢复模式中还是无法刷入固件。</p>
+
+<h4>解决</h4>
+
+<p>到解决的这一步时，我已经杀死无数的脑细胞。手机因为刷固件次数过多，已经用着一个不知从何处整来的固件。如果不能顺利升入版本，我貌似也就没有再使用的冲动，所以必须上CM9。我在中英文论坛上无法解决的问题，在稍微进行下头脑风暴就觉得能在韩国论坛上找到答案。果然。下面所说的升固件的手段就是从<a href="http://lhc368.blog.me/60160952763">韩国博客</a>上考下来的。作为韩版升级CM固件，是个很好的参考。</p>
+
+<p>我先说思路。恢复模式中升级CM固件无法成功的原因时没有通过认证，韩版的型号是SHW-M250K，CM固件可用的所有的型号均是I9100或I9100T等变体。我们需要做的就是将下载的固件型号在里面的某些类似于ini文件中修改即可。</p>
+
+<p>需要如下文件:</p>
+
+<p>*. 韩版手机一台，型号为SHW-M250K/S/L;</p>
+
+<p>*. <a href="http://download.cyanogenmod.com/?device=galaxys2&amp;type=nightly">此处下的CM9 nightly固件</a>;</p>
+
+<p>*. <a href="http://www.acrosoft.pe.kr/board/60677">此处下载AcroEdit</a>用于修改固件对应的手机型号;</p>
+
+<p>方法如下：</p>
+
+<ol>
+<li><p>用压缩文件打开固件文件，提取固件(我下载的为:cm-9-20120728-NIGHTLY-galaxy2.zip)中的<code>/META-INF/com/google/android/</code>中的updater-script和<code>system</code>中的build.prop文件置于桌面。</p></li>
+<li><p>用AcroEdit分别打开两个文件，将其中的GT-I9100*全部换成SHW-M250K.一共替换十处。换好后，在AcroEdit中存盘，将两个文件通过压缩程序放回原位置，覆盖原有的文件。
+<img src="http://farm8.staticflickr.com/7260/7668410176_9bfdd5d4be.jpg" alt="" />
+<img src="http://farm9.staticflickr.com/8424/7668410222_8906981ab7_z.jpg" alt="" />
+<img src="http://farm9.staticflickr.com/8022/7668410804_b5fbba1672_b.jpg" alt="" /></p></li>
+<li><p>然后将该文件考入手机SD卡根目录，就可以正常的通过恢复模式刷固件了。三星进入恢复模式的方式为：音量键+Home键+开关。进入后，选择<code>install
+zip from sdcard</code>，选好刚才考入的zip固件就可以update。完了记得来个factory reset就没问题了。</p></li>
+</ol>
+
+
+<h4>注意</h4>
+
+<p>*. 只要是刷机就有风险，三星的质保肯定就没有的了。</p>
+
+<p>*. 这次刷机完之后，下次再刷其他固件就不用再改了，机子实质上已经变成了一台无锁的国际版。也就是随便刷。</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,539 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>备份VPS内容到dropbox - sourrabbit & linpx</title>
+  <meta name="author" content="Dong Ping; Lin Pengxuan">
+
+  
+  <meta name="description" content="我对github一筹莫展，昨晚更新了博客内容后，还是发现无法在github上备份，除非我用心去学这东西，不然问题还是会一再出现。于是就自然想到了用dropbox来备份我的vps和博客内容。 首先被否定了的是dropbox官网上贴出的linux安装教程。
+运行出错，考虑到机子内存本身不大， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://linpengxuan.github.com/newwebsite/blog/2012/04/14/vps-backup-to-dropbox">
+//  <link href="/favicon.png" rel="icon">
+<link href="http://colors4.us/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/linpx_sourrabbit_rss" rel="alternate" title="sourrabbit & linpx" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Ruge+Boogie|Ruthie|Flavors|Rancho|Galdeano' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Philosopher:[object Object],[object Object],[object Object],[object Object]' rel='stylesheet' type='text/css'>
+
+
+<!-- Load jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery.noConflict(); // ender.js conflicts with jQuery
+</script>
+
+<!-- Load FancyBox -->
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" />
+<script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+
+<!-- Custom Scripts -->
+<script language="Javascript" type="text/javascript">
+    // ender.js gobbles jQuery's ready event: Use ender.js $ instead
+    $(document).ready(function() {
+        jQuery(".fancybox").fancybox();
+    });
+</script>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-28584476-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">sourrabbit & linpx</a></h1>
+  
+    <h2>a blog for the colors in our life</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/linpx_sourrabbit_rss" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:linpengxuan.github.com/newwebsite" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="http://www.flickr.com/photos/pennyg/sets">Photos</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">备份VPS内容到dropbox</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-14T09:16:45+08:00" pubdate data-updated="true">Apr 14<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>我对github一筹莫展，昨晚更新了博客内容后，还是发现无法在github上备份，除非我用心去学这东西，不然问题还是会一再出现。于是就自然想到了用dropbox来备份我的vps和博客内容。</p>
+
+<p>首先被否定了的是dropbox官网上贴出的<a href="https://www.dropbox.com/install?os=lnx">linux安装教程</a>。
+运行出错，考虑到机子内存本身不大，于是就掠过了。</p>
+
+<p>继续在网上晃荡，直到我看见了这篇<a href="http://davehope.co.uk/Blog/backup-your-linux-vps-to-dropbox/">Backup your Linux system to Dropbox</a>。原
+理是利用mysql登录dropbox，将文件打包上传，由于vps带宽的原因，我发现几乎是妙传。贴出code，供大伙参 考。<!--more--></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#!/bin/bash
+</span><span class='line'>DROPBOX_USER="Your Dropbox username"
+</span><span class='line'>DROPBOX_PASS="Your Dropbox password"
+</span><span class='line'>DROPBOX_DIR="Directory in your dropbox account to store the backups, e.g.
+</span><span class='line'>/backups"
+</span><span class='line'>BACKUP_SRC="/home /var/www /var/git /etc /root"
+</span><span class='line'>BACKUP_DST="/tmp"
+</span><span class='line'>MYSQL_SERVER="127.0.0.1"
+</span><span class='line'>MYSQL_USER="root"
+</span><span class='line'>MYSQL_PASS="Your MySQL password"
+</span><span class='line'>
+</span><span class='line'>#
+</span><span class='line'># Stop editing here.
+</span><span class='line'>NOW=$(date +"%Y.%m.%d")
+</span><span class='line'>DESTFILE="$BACKUP_DST/$NOW.tgz"
+</span><span class='line'>
+</span><span class='line'>#
+</span><span class='line'># Upload a file to Dropbox.
+</span><span class='line'># $1 = Source file
+</span><span class='line'># $2 = Destination file.
+</span><span class='line'>function dropboxUpload
+</span><span class='line'>{
+</span><span class='line'>    #
+</span><span class='line'>    # Code based on DropBox Uploader 0.6 from
+</span><span class='line'>http://www.andreafabrizi.it/?dropbox_uploader
+</span><span class='line'>    LOGIN_URL="https://www.dropbox.com/login"
+</span><span class='line'>    HOME_URL="https://www.dropbox.com/home"
+</span><span class='line'>    UPLOAD_URL="https://dl-web.dropbox.com/upload"
+</span><span class='line'>    COOKIE_FILE="/tmp/du_cookie_$RANDOM"
+</span><span class='line'>    RESPONSE_FILE="/tmp/du_resp_$RANDOM"
+</span><span class='line'>
+</span><span class='line'>    UPLOAD_FILE=$1
+</span><span class='line'>    DEST_FOLDER=$2
+</span><span class='line'>
+</span><span class='line'>    # Login
+</span><span class='line'>    echo -ne " > Logging in..."
+</span><span class='line'>    curl -s -i -c $COOKIE_FILE -o $RESPONSE_FILE --data
+</span><span class='line'>"login_email=$DROPBOX_USER&login_password=$DROPBOX_PASS&t=$TOKEN"
+</span><span class='line'>"$LOGIN_URL"
+</span><span class='line'>    grep "location: /home" $RESPONSE_FILE > /dev/null
+</span><span class='line'>
+</span><span class='line'>    if [ $? -ne 0 ]; then
+</span><span class='line'>        echo -e " Failed!"
+</span><span class='line'>        rm -f "$COOKIE_FILE" "$RESPONSE_FILE"
+</span><span class='line'>        exit 1
+</span><span class='line'>    else
+</span><span class='line'>        echo -e " OK"
+</span><span class='line'>    fi
+</span><span class='line'>
+</span><span class='line'>    # Load home page
+</span><span class='line'>    echo -ne " > Loading Home..."
+</span><span class='line'>    curl -s -i -b "$COOKIE_FILE" -o "$RESPONSE_FILE" "$HOME_URL"
+</span><span class='line'>
+</span><span class='line'>    if [ $? -ne 0 ]; then
+</span><span class='line'>        echo -e " Failed!"
+</span><span class='line'>        rm -f "$COOKIE_FILE" "$RESPONSE_FILE"
+</span><span class='line'>        exit 1
+</span><span class='line'>    else
+</span><span class='line'>        echo -e " OK"
+</span><span class='line'>    fi
+</span><span class='line'>
+</span><span class='line'>    # Get token
+</span><span class='line'>    TOKEN=$(cat "$RESPONSE_FILE" | tr -d '\n' | sed 's/.*&lt;form
+</span><span class='line'>action="https:\/\/dl-web.dropbox.com\/upload"[^>]*>\s*&lt;input type="hidden"
+</span><span class='line'>name="t" value="\([a-z 0-9]*\)".*/\1/')
+</span><span class='line'>
+</span><span class='line'>    # Upload file
+</span><span class='line'>    echo -ne " > Uploading '$UPLOAD_FILE' to 'DROPBOX$DEST_FOLDER/'..."
+</span><span class='line'>    curl -s -i -b $COOKIE_FILE -o $RESPONSE_FILE -F "plain=yes" -F
+</span><span class='line'>"dest=$DEST_FOLDER" -F "t=$TOKEN" -F "file=@$UPLOAD_FILE"  "$UPLOAD_URL"
+</span><span class='line'>    grep "HTTP/1.1 302 FOUND" "$RESPONSE_FILE" > /dev/null
+</span><span class='line'>
+</span><span class='line'>    if [ $? -ne 0 ]; then
+</span><span class='line'>        echo -e " Failed!"
+</span><span class='line'>        rm -f "$COOKIE_FILE" "$RESPONSE_FILE"
+</span><span class='line'>        exit 1
+</span><span class='line'>    else
+</span><span class='line'>        echo -e " OK"
+</span><span class='line'>        rm -f "$COOKIE_FILE" "$RESPONSE_FILE"
+</span><span class='line'>    fi
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'># Backup files.
+</span><span class='line'>mysqldump -u $MYSQL_USER -h $MYSQL_SERVER -p$MYSQL_PASS --all-databases >
+</span><span class='line'>"$NOW-Databases.sql"
+</span><span class='line'>tar cfz "$DESTFILE" $BACKUP_SRC "$NOW-Databases.sql"
+</span><span class='line'>
+</span><span class='line'>dropboxUpload "$DESTFILE" "$DROPBOX_DIR"
+</span><span class='line'>
+</span><span class='line'>rm -f "$NOW-Databases.sql" "$DESTFILE"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>完了大伙可以把这个加到crontab去，设定一个更新的循环时间就行。我的情况是，直接加在我邮件发送博客的批处理命令后，一旦邮件更新后，便自动打包上传了。很方便。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">linpx</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-14T09:16:45+08:00" pubdate data-updated="true">Apr 14<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/computer/'>computer</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://linpengxuan.github.com/newwebsite/blog/2012/04/14/vps-backup-to-dropbox/" data-via="linpx" data-counturl="http://linpengxuan.github.com/newwebsite/blog/2012/04/14/vps-backup-to-dropbox/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/04/14/how-i-unlock-my-at-t-iphone-4/" title="Previous Post: How I unlock my AT&T iPhone 4">&laquo; How I unlock my AT&T iPhone 4</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/04/17/scrobble-on-movie-and-physical-checkup/" title="next Post: 电影，体检等的流水账">电影，体检等的流水账 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Us</h1>
+<p>My wife <a href="http://twitter.com/sourrabbit">@sourrabbit</a> and I <a href="http://twitter.com/linpx">@linpx</a> are the only authors contributing to this blog. We believe life is a book, from which all those good and bad, happy and sad things are written. We commit to keep this blog up, for the memories of the past as well as the colors in our life.<a href="http://www.colors4.us/about-us/index.html">...</a></p>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/03/17/a-new-journey/">新的旅程</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/16/nights-before-leaving-korea/">离开韩国前夕</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/14/re-rent/">再搬家</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/12/say-goodbye-to-my-wisdom-teeth/">致我终将逝去的智齿们</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/25/a-life-of-ease-and-comfort-in-taiwan/">停留在台湾的小安逸</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("linpx", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/linpx" class="twitter-follow-button" data-show-count="false">Follow @linpx</a>
+  
+</section>
+
+<section>
+ <h1>Categories</h1>
+ <ul id="categories">
+ <li class='category'><a href='http://colors4.us/blog/categories/computer/'>computer (23)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/connect/'>connect (1)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/dream/'>dream (2)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/exam/'>exam (4)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/job/'>job (6)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/jokes/'>jokes (32)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/korea/'>korea (34)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/life/'>life (156)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/miscellaneous/'>miscellaneous (5)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/movie/'>movie (13)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/octopress/'>octopress (11)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/photo/'>photo (34)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/rabbit/'>rabbit (10)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/reading/'>reading (6)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/society/'>society (17)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/sourrabbit/'>sourrabbit (4)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/thoughts/'>thoughts (5)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/travel/'>travel (16)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/xp/'>xp (12)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/旧闻/'>旧闻 (2)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/爱好/'>爱好 (2)</a></li>
+<li class='category'><a href='http://colors4.us/blog/categories/话/'>话 (1)</a></li>
+
+ </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Dong Ping; Lin Pengxuan -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'linpx';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://linpengxuan.github.com/newwebsite/blog/2012/04/14/vps-backup-to-dropbox/';
+        var disqus_url = 'http://linpengxuan.github.com/newwebsite/blog/2012/04/14/vps-backup-to-dropbox/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

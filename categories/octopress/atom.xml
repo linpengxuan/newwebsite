@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: octopress | sourrabbit & linpx]]></title>
+  <link href="http://linpengxuan.github.com/newwebsite/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://linpengxuan.github.com/newwebsite/"/>
+  <updated>2013-03-22T16:52:53+08:00</updated>
+  <id>http://linpengxuan.github.com/newwebsite/</id>
+  <author>
+    <name><![CDATA[Dong Ping; Lin Pengxuan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[octopress博文设置中英文题目]]></title>
+    <link href="http://linpengxuan.github.com/newwebsite/blog/2012/12/26/permalinks-setup-in-octopress/"/>
+    <updated>2012-12-26T17:00:42+08:00</updated>
+    <id>http://linpengxuan.github.com/newwebsite/blog/2012/12/26/permalinks-setup-in-octopress</id>
+    <content type="html"><![CDATA[<p>本篇博文专门针对本网站，可能(99.9%)不合适其他octopress博客系统。这里提出仅是抛砖引玉，给octopress爱好者提供一个新想法。</p>
+
+<p>我先介绍我的博客。我的博客发表比较特别，是用电子邮件发送。这意味着只要手里有网络不用搭建任何平台就可以进行文字发表。有兴趣的可以看看我的这篇<a href="http://colors4.us/blog/2012/01/20/%E5%88%A9%E7%94%A8%E9%82%AE%E4%BB%B6%E5%8F%91%E8%A1%A8octopress%E5%8D%9A%E5%AE%A2/">文字</a>
+，<strong>介绍如何用电子邮件发布博客</strong>。</p>
+
+<p>我也不知道是如何整好utf-8代码的，但弄好后，发布的博文地址全部带上了中文。在浏览器上还是挺好看的，不过拷贝后就能看到很多如<code>%88%A9%E7%94%A8%</code>般巨长地址，看完总是让我留下<strong>这不科学</strong>的惆怅感。不过今天在我进行调试的时候，总算摸到<strong>一个让博文保持中文标题，同时网址走英文格式的方法</strong>不敢独自敝帚。</p>
+
+<p>在邮件标题栏中，我发表原来是这样书写的：</p>
+
+<p>民国101年台湾旅行小记 || secret: ****** / author: linpx / categories: life /
+comments: true，</p>
+
+<p>(其实就是YMAL的文件头的设定), 现在如果改成这个样式就完全没有问题：</p>
+
+<p>trip to Taiwan in 2012 || title: 民国101年台湾旅行小记 / secret: ****** / author:
+linpx / categories: life / comments: true</p>
+
+<p>这样我就得到一片中文博客的题目，和一个英文的自定义网址，可以看成是permalink，方便以后转到其他平台。我果然已经在开始想其他平台了。</p>
+
+<p>参考了如下网址：</p>
+
+<ol>
+<li><a href="https://github.com/mojombo/jekyll/wiki/Permalinks">Permalinks wiki</a></li>
+<li><a href="https://github.com/mojombo/jekyll/wiki/Configuration">Permalinks Jekyll configuration</a></li>
+</ol>
+
+
+<p>图片一看就明白我说的是什么了。(文字表达能力不好的极好表现)</p>
+
+<p><img src="http://farm9.staticflickr.com/8499/8309147407_eb75fc9525_b.jpg" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[在octopress上引入相片流]]></title>
+    <link href="http://linpengxuan.github.com/newwebsite/blog/2012/11/10/photostream-in-octopress/"/>
+    <updated>2012-11-10T22:53:26+08:00</updated>
+    <id>http://linpengxuan.github.com/newwebsite/blog/2012/11/10/photostream-in-octopress</id>
+    <content type="html"><![CDATA[<p>我一直很想在博客上能够多一项小功能，就是照片流。这样我就可以把flickr上的照片一连串的全部共享出来，或者有次出行了，拍了些照片，只要把博文地址微博给朋友，就可以上来浏览了。没错，就是和以前msn博客上的相册是一个道理。只是换到了octopress后，这些都得自己动手整。很繁琐，不过弄好了的话，还是有成就感的。</p>
+
+<h4>设立相册的可能性</h4>
+
+<p>当然是可能的了，要不这篇博客就没有意义了。</p>
+
+<p>我本人是不会任何编程，也不是学计算机的，所以很多时候，我知道这样去尝试可能可以，至于要问我为什么可以，对不起，实际上我这里给出的编码啥意思，自己也不明白。只要能得到想要的结果，知其然而不知其所以然，也挺好，不是？</p>
+
+<p>我这里引用的代码是<a href="http://fancyapps.com/fancybox/">fancybox</a>,做好后会有这样的<a href="http://fancyapps.com/fancybox/demo/">效果</a>。很显然，对于一个超小众的octopress博客平台来说，想使用另一个超小众的的相片流代码，一定得找成功的先例。实际上，平台比较出名的<a href="http://zespia.tw/Octopress-Theme-Slash/">slash主题</a>已经支持了fancybox，不过并未给出如何设置。于是，我找到了这篇文章<a href="http://tritarget.org/blog/2012/05/07/integrating-photos-into-octopress-using-fancybox-and-plugin/">Integrating Photos Into OctoPress Using FancyBox and Plugin</a>。写得非常好，以至于我在第一次rake generate就成功了，而并未出现我期待的解析错误。<!--more--></p>
+
+<h4>操作步骤</h4>
+
+<p>我这里就直接给从操作步骤了，想要理解为何的同学，还是移步到<a href="http://tritarget.org/blog/2012/05/07/integrating-photos-into-octopress-using-fancybox-and-plugin/">引文链接</a>去看看吧。</p>
+
+<p><strong>第一步</strong>，把<code>photos_tag.rb</code><a href="https://gist.github.com/2631877">文件</a>放到<code>plugins/</code>文件夹去。
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://gist.github.com/2631877.git  #文件在2631877文件夹中</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><strong>第二步</strong>，在<code>source/_includes/custom/head.html</code> 文件底部加入如下内容
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;!-- Load jQuery -->
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript">&lt;/script>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;script type="text/javascript">
+</span><span class='line'>    jQuery.noConflict(); // ender.js conflicts with jQuery
+</span><span class='line'>&lt;/script>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;!-- Load FancyBox -->
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;p>&lt;link rel="stylesheet" href="http://linpengxuan.github.com/newwebsite/fancybox/jquery.fancybox.css" />&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;script src="http://linpengxuan.github.com/newwebsite/fancybox/jquery.fancybox.pack.js" type="text/javascript">&lt;/script>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;p>&lt;!-- Fix FancyBox style for OctoPress -->
+</span><span class='line'>&lt;style type="text/css">
+</span><span class='line'>  .fancybox-wrap { position: fixed !important; }
+</span><span class='line'>  .fancybox-opened {
+</span><span class='line'>    -webkit-border-radius: 4px !important;
+</span><span class='line'>       -moz-border-radius: 4px !important;
+</span><span class='line'>            border-radius: 4px !important;
+</span><span class='line'>  }
+</span><span class='line'>  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+</span><span class='line'>    background-color: transparent !important;
+</span><span class='line'>    border: 0 !important;
+</span><span class='line'>  }
+</span><span class='line'>&lt;/style>
+</span><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;!-- Custom Scripts -->
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;script language="Javascript" type="text/javascript">
+</span><span class='line'>    // ender.js gobbles jQuery's ready event: Use ender.js $ instead
+</span><span class='line'>    $(document).ready(function() {
+</span><span class='line'>        jQuery(".fancybox").fancybox();
+</span><span class='line'>    });
+</span><span class='line'>&lt;/script>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><strong>第三步</strong>， 在<code>sass/custom/_styles.scss</code>追加如下内容
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/&lt;em> FancyBox Galleries &lt;/em>/
+</span><span class='line'>$rad: 6px;
+</span><span class='line'>ul.gallery {
+</span><span class='line'>  border: thin solid gray;
+</span><span class='line'>  -webkit-border-radius: $rad;
+</span><span class='line'>  -moz-border-radius: $rad;
+</span><span class='line'>  border-radius: $rad;
+</span><span class='line'>  text-align: center;
+</span><span class='line'>  padding: 5px;
+</span><span class='line'>  li {&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>display: inline;
+</span><span class='line'>padding: 5px;
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><strong>第四步</strong>，从这里开始就是微调了。如果看过原文的话，会发现相册流是不直接支持flickr的网址的，任何网址在使用时，都会在前方默认加上网站地址，我的情况是，会出现诸如<code>http://colors4.us/farm9.staticflickr.com...</code>等没有意义的网址。这一步的解决方法，对我来说可以用，但不完美，我个人妥协了。可以在<code>_config.yml</code>中加入如下内容：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>photos_prefix: https://farm</span></code></pre></td></tr></table></div></figure></notextile></div>
+<strike>这样做就如同设立了歌permlink一样，规定死了打头网址的内容，后面我们在博文中输入相册照片地址<code>http://farm9.staticflickr.com/8198/8171602168_1788957e3c_m.jpg</code>时，只需输入<code>8198/8171602168_1788957e3c_m.jpg</code>即可。</strike></p>
+
+<p><strike>但是如果常用flickr的朋友就会发现，这里有个前提，就是所有的相片的网址，都必须在<code>farm9</code>这个网址段上。我个人来说，使用时间够长，我照片网址从<code>farm1</code>到<code>farm9</code>都有，设死了的话就没有办法套用其他网址段的照片了。我做了很多次试验，发现只要后面那段数字正确，前面的网址段变化的数字不会产生影响，或者直接说<code>http://farm9.staticflickr.com/8198/8171602168_1788957e3c_m.jpg</code>等于<code>http://farm1.staticflickr.com/8198/8171602168_1788957e3c_m.jpg</code>。</strike></p>
+
+<p>其实我突然想到，这个flickr不同服务器的问题。实际上，我只需在_config.yml上登记<code>http://farm</code>即可，剩下在博文中输入<code>9.staticflickr.com/8198/817160...</code>即可完美解决该问题。这样的结果就是可以自由调整服务器的数字1~9，而不用担心会不会突然链接被重置。哈哈，我太厉害了。</p>
+
+<p><strong>第五步</strong>，这里介绍实例，请一定注意看井号后面的说明。如果只展示一张的话，可在博文中插入如下内容：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[% photo 9.staticflickr.com/8198/8171602168_1788957e3c_b.jpg default 这里输入照片的名字 %] #把句子前后的中括号改成大括号，因为它本身放入博文就可执行了</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>如果展示相册流的话，则插入如下内容：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[% gallery %] #把本行句子前后的中括号改成大括号
+</span><span class='line'>9.staticflickr.com/7120/7698203656_ae8ae99ed3_b.jpg: pic1      #thumb pic默认为7698203656_ae8ae99ed3_m.jpg，刚好和flickr对应
+</span><span class='line'>9.staticflickr.com/3504/3997360729_cdaf975b63_z.jpg[9.staticflickr.com/3504/3997360729_cdaf975b63_m.jpg]: pic2       #可以自己设定thumb pic置于中括号内
+</span><span class='line'>9.staticflickr.com/6182/6150404978_10c5d6b9c5_b.jpg: pic3
+</span><span class='line'>9.staticflickr.com/7278/7714113508_3c28b8eaa0_b.jpg:                      #可以不起名字，但是一定不能省略冒号
+</span><span class='line'>3.staticflickr.com/2511/3976228983_a670a644b4_o.jpg[3.staticflickr.com/2511/3976228983_5ef14d2ca5_m.jpg]: pic5
+</span><span class='line'>9.staticflickr.com/4142/4782988086_065998b9af_b.jpg: pic6
+</span><span class='line'>[% endgallery %] #把本行句子前后的中括号改成大括号</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h4>演示</h4>
+
+<p>我这里就先演示一下fancybox相片流的效果吧。</p>
+
+<p><a href="https://farm9.staticflickr.com/8198/8171602168_1788957e3c_b.jpg" class="fancybox" title="这里输入照片的名字 "><img src="https://farm9.staticflickr.com/8198/8171602168_1788957e3c_m.jpg" alt="这里输入照片的名字 " /></a></p>
+
+<hr />
+
+<p><ul class="gallery">
+<li><a href="https://farm9.staticflickr.com/7120/7698203656_ae8ae99ed3_b.jpg" class="fancybox" rel="gallery-4bad6f1035047845e295c0ab1239aa18" title="这里起名字"><img src="https://farm9.staticflickr.com/7120/7698203656_ae8ae99ed3_m.jpg" alt="这里起名字" /></a></li><li><a href="https://farm4.staticflickr.com/3504/3997360729_cdaf975b63_z.jpg" class="fancybox" rel="gallery-4bad6f1035047845e295c0ab1239aa18" title="也可以不起名字"><img src="https://farm4.staticflickr.com/3504/3997360729_cdaf975b63_m.jpg" alt="也可以不起名字" /></a></li><li><a href="https://farm9.staticflickr.com/6182/6150404978_10c5d6b9c5_b.jpg" class="fancybox" rel="gallery-4bad6f1035047845e295c0ab1239aa18" title="起个喜欢的名字吧"><img src="https://farm9.staticflickr.com/6182/6150404978_10c5d6b9c5_m.jpg" alt="起个喜欢的名字吧" /></a></li><li><a href="https://farm9.staticflickr.com/7278/7714113508_3c28b8eaa0_b.jpg" class="fancybox" rel="gallery-4bad6f1035047845e295c0ab1239aa18" title="<br/>"><img src="https://farm9.staticflickr.com/7278/7714113508_3c28b8eaa0_m.jpg" alt="<br/>" /></a></li><li><a href="https://farm3.staticflickr.com/2511/3976228983_a670a644b4_o.jpg" class="fancybox" rel="gallery-4bad6f1035047845e295c0ab1239aa18" title="maybe an English one?"><img src="https://farm3.staticflickr.com/2511/3976228983_5ef14d2ca5_m.jpg" alt="maybe an English one?" /></a></li><li><a href="https://farm9.staticflickr.com/4142/4782988086_065998b9af_b.jpg" class="fancybox" rel="gallery-4bad6f1035047845e295c0ab1239aa18" title="haha"><img src="https://farm9.staticflickr.com/4142/4782988086_065998b9af_m.jpg" alt="haha" /></a></li>
+</ul></p>
+
+<p>我平常拍照不多，fancybox简单的功能刚好能满足我的需求。呵呵，不容易啊，上了octopress的船要想下，确实不容易啊，只能自己举着鞭子敲着自己了。:)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[调整octopress主题小结]]></title>
+    <link href="http://linpengxuan.github.com/newwebsite/blog/2012/09/05/octopress-theme-adjusting/"/>
+    <updated>2012-09-05T20:32:10+08:00</updated>
+    <id>http://linpengxuan.github.com/newwebsite/blog/2012/09/05/octopress-theme-adjusting</id>
+    <content type="html"><![CDATA[<p>太难了，对博客主题的更改。这是我大半年以前刚开始写博时的感觉。毕竟octopress不是wordpress，很方便的随便点击几下确定键就可以了。我确实尝试过，失败了。一个很重要的原因是，我不知道css的语法。不知道的话，很简单，就去学。css不是excel啊，太难学了。我的那种抄袭式的学习方式根本派不上用场。在没有办法搞定的前提下，我选择忽略对主题背景修改的重视。这一放，就到了半年后，也就是现在。</p>
+
+<p>我要求的博客样式非常简单。我想让我博客中的背景图片统一。怎么样，很简单吧。问题就在这里，我找到了满意的照片，却不知道应该放到哪个文件夹去。即使放下后，基于octopress完全定制的风格，我也不知道应该从哪儿修改文件。一切从昨天突然想到的一次google收索开始。这篇<a href="http://melandri.net/2012/02/14/octopress-theme-customization/">博文</a>
+参考后，帮助很大。完全符合我的风格。背景统一，干净，简介。</p>
+
+<p><img src="http://farm9.staticflickr.com/8033/7934929014_e330c5a861_z.jpg" alt="" /></p>
+
+<!--more-->
+
+
+<h4>分离navigation bar</h4>
+
+<p>由于octopress基于jekyll模式，我很方便地根据文章的提示，将主题对应的源代码下载下来。没有多想。直接将这个<code>sass/custom/_styles.scss</code>考入我的博客文件系统里面。</p>
+
+<h4>统一背景图片</h4>
+
+<p>octopress中背景图片是直接存于css中的。更明确点说是，主背景照片为这个文件<code>source/images/line-tile.png</code>。在标题框中，我博客的例子就是<code>sourrabbit&amp;linpx</code>，也存在一个标题背景图片。一般情况下，两张照片是不统一的，不过看起来，我个人感觉不是我想要的风格，我希望的是不会让文字阅读分心的背景图片，同时有些minimalist风格。需要统一。octopress本身文件系统是没有定义标题框背景图片的，仅是对颜色进行了一些过渡，所以我定义标题背景照片为<code>source/images/header_bg.png</code>。导入希望用的背景图片，同时命名为上述两个文件名字。</p>
+
+<p>之后我们需要做些调整。我在<code>sass/custom/_style.scss</code>的第13~17行中指定了标题框的背景图片。这样直接rake之后，就OK了。</p>
+
+<p><div><script src='https://gist.github.com/3633497.js?file='></script>
+<noscript><pre><code></code></pre></noscript></div>
+</p>
+
+<h4>字体的选择和修改</h4>
+
+<p>octopress的中文字体我就不修改了，因为不会。英文字体还是OK的，不过太死板，用的人太多。如果有想换字体的话，可以参考这个<a href="http://octopress.org/docs/theme/">官方文件</a>。我直接讲我的方法。</p>
+
+<p>先寻找心仪的字体。我一般上google web fonts里找到后，寻找给出的字体使用链接即可样式如下<code>&lt;link href='http://
+......&gt;</code>.下面这个文件是我的字体方案，供参考。于<code>source/_includes/custom/head.html</code></p>
+
+<p><div><script src='https://gist.github.com/3631035.js?file='></script>
+<noscript><pre><code></code></pre></noscript></div>
+</p>
+
+<p>找到字体后，就要定义字体如何使用了。于<code>sass/custom/_fonts.scss</code></p>
+
+<p><div><script src='https://gist.github.com/3631051.js?file='></script>
+<noscript><pre><code></code></pre></noscript></div>
+</p>
+
+<h4>背景文件的选择来源</h4>
+
+<p>上述的背景和字体选择完了后，octopress看上去一定会清爽很多。我个人的建议是，背景不要用大红大绿，要清淡，简约，不要过于喧宾夺主。因此留给我们的选择不会太多，还好我们有网络。我给出几个网站参考。</p>
+
+<ol>
+<li><a href="http://www.elegantthemes.com/demo/?theme=Flexible">Elegant Themes</a>
+的这个网页非常好，可以调字体，可以选背景pattern，所见即所得;</li>
+<li><a href="http://www.designshard.com/freebies/ultimate-source-for-tiled-background-patterns/">Ultimate Source for tiled background patterns</a>;</li>
+<li><a href="http://www.dinpattern.com/">dinpattern</a>;</li>
+<li><a href="http://patterncooler.com">patterncooler</a>是我背景下载的网站，牛逼在于可以选择pattern重复的尺寸，颜色，还可以免费下载。东西选择太多，反而不知道要走哪一个了。呵呵。</li>
+</ol>
+
+
+<p><img src="http://farm9.staticflickr.com/8036/7935087262_1cbbd2fa2f_z.jpg" alt="" /></p>
+
+<h4>结语</h4>
+
+<p>前些天我看到了jekyll bootstrap作者整了个<a href="http://www.ruhoh.com">ruhoh.com</a>,非常漂亮的jekyll博客平台。就不多说它网页上的好处了，居然可以无缝支持我octopress上的中文名permlink这点就让我当时就有移过去的冲动了。只是整起来花些时间，如果是打算新开博客的朋友，倒是一个很好的选择。在机子上或vps上搭好ruby平台就行了。不像octopress这样，当初为了整这个就花了好久。</p>
+
+<p>博客写久了会有写博客的习惯。我和我太太就很有信心将这个博客写上60年。只是未知那时是否还是如此复杂的人机交流模式。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[备份VPS内容到dropbox]]></title>
+    <link href="http://linpengxuan.github.com/newwebsite/blog/2012/04/14/vps-backup-to-dropbox/"/>
+    <updated>2012-04-14T09:16:45+08:00</updated>
+    <id>http://linpengxuan.github.com/newwebsite/blog/2012/04/14/vps-backup-to-dropbox</id>
+    <content type="html"><![CDATA[<p>我对github一筹莫展，昨晚更新了博客内容后，还是发现无法在github上备份，除非我用心去学这东西，不然问题还是会一再出现。于是就自然想到了用dropbox来备份我的vps和博客内容。</p>
+
+<p>首先被否定了的是dropbox官网上贴出的<a href="https://www.dropbox.com/install?os=lnx">linux安装教程</a>。
+运行出错，考虑到机子内存本身不大，于是就掠过了。</p>
+
+<p>继续在网上晃荡，直到我看见了这篇<a href="http://davehope.co.uk/Blog/backup-your-linux-vps-to-dropbox/">Backup your Linux system to Dropbox</a>。原
+理是利用mysql登录dropbox，将文件打包上传，由于vps带宽的原因，我发现几乎是妙传。贴出code，供大伙参 考。<!--more-->
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>!/bin/bash&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>DROPBOX_USER="Your Dropbox username"
+</span><span class='line'>DROPBOX_PASS="Your Dropbox password"
+</span><span class='line'>DROPBOX_DIR="Directory in your dropbox account to store the backups, e.g.
+</span><span class='line'>/backups"
+</span><span class='line'>BACKUP_SRC="/home /var/www /var/git /etc /root"
+</span><span class='line'>BACKUP_DST="/tmp"
+</span><span class='line'>MYSQL_SERVER="127.0.0.1"
+</span><span class='line'>MYSQL_USER="root"
+</span><span class='line'>MYSQL_PASS="Your MySQL password"&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>#&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>Stop editing here.&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>NOW=$(date +"%Y.%m.%d")
+</span><span class='line'>DESTFILE="$BACKUP_DST/$NOW.tgz"&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>#&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>Upload a file to Dropbox.&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>$1 = Source file&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>$2 = Destination file.&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>function dropboxUpload
+</span><span class='line'>{&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>#
+</span><span class='line'># Code based on DropBox Uploader 0.6 from
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>http://www.andreafabrizi.it/?dropbox_uploader&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>LOGIN_URL="https://www.dropbox.com/login"
+</span><span class='line'>HOME_URL="https://www.dropbox.com/home"
+</span><span class='line'>UPLOAD_URL="https://dl-web.dropbox.com/upload"
+</span><span class='line'>COOKIE_FILE="/tmp/du_cookie_$RANDOM"
+</span><span class='line'>RESPONSE_FILE="/tmp/du_resp_$RANDOM"
+</span><span class='line'>
+</span><span class='line'>UPLOAD_FILE=$1
+</span><span class='line'>DEST_FOLDER=$2
+</span><span class='line'>
+</span><span class='line'># Login
+</span><span class='line'>echo -ne " &gt; Logging in..."
+</span><span class='line'>curl -s -i -c $COOKIE_FILE -o $RESPONSE_FILE --data
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>"login_email=$DROPBOX_USER&amp;login_password=$DROPBOX_PASS&amp;t=$TOKEN"
+</span><span class='line'>"$LOGIN_URL"&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>grep "location: /home" $RESPONSE_FILE &gt; /dev/null
+</span><span class='line'>
+</span><span class='line'>if [ $? -ne 0 ]; then
+</span><span class='line'>    echo -e " Failed!"
+</span><span class='line'>    rm -f "$COOKIE_FILE" "$RESPONSE_FILE"
+</span><span class='line'>    exit 1
+</span><span class='line'>else
+</span><span class='line'>    echo -e " OK"
+</span><span class='line'>fi
+</span><span class='line'>
+</span><span class='line'># Load home page
+</span><span class='line'>echo -ne " &gt; Loading Home..."
+</span><span class='line'>curl -s -i -b "$COOKIE_FILE" -o "$RESPONSE_FILE" "$HOME_URL"
+</span><span class='line'>
+</span><span class='line'>if [ $? -ne 0 ]; then
+</span><span class='line'>    echo -e " Failed!"
+</span><span class='line'>    rm -f "$COOKIE_FILE" "$RESPONSE_FILE"
+</span><span class='line'>    exit 1
+</span><span class='line'>else
+</span><span class='line'>    echo -e " OK"
+</span><span class='line'>fi
+</span><span class='line'>
+</span><span class='line'># Get token
+</span><span class='line'>TOKEN=$(cat "$RESPONSE_FILE" | tr -d '\n' | sed 's/.*&lt;form
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>action="https:\/\/dl-web.dropbox.com\/upload"[&lt;sup>>]&lt;em>>\s&lt;/em>&lt;input&lt;/sup> type="hidden"
+</span><span class='line'>name="t" value="([a-z 0-9]&lt;em>)".&lt;/em>/\1/')&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code># Upload file
+</span><span class='line'>echo -ne " &gt; Uploading '$UPLOAD_FILE' to 'DROPBOX$DEST_FOLDER/'..."
+</span><span class='line'>curl -s -i -b $COOKIE_FILE -o $RESPONSE_FILE -F "plain=yes" -F
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>"dest=$DEST_FOLDER" -F "t=$TOKEN" -F "file=@$UPLOAD_FILE"  "$UPLOAD_URL"&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>grep "HTTP/1.1 302 FOUND" "$RESPONSE_FILE" &gt; /dev/null
+</span><span class='line'>
+</span><span class='line'>if [ $? -ne 0 ]; then
+</span><span class='line'>    echo -e " Failed!"
+</span><span class='line'>    rm -f "$COOKIE_FILE" "$RESPONSE_FILE"
+</span><span class='line'>    exit 1
+</span><span class='line'>else
+</span><span class='line'>    echo -e " OK"
+</span><span class='line'>    rm -f "$COOKIE_FILE" "$RESPONSE_FILE"
+</span><span class='line'>fi
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>}&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>Backup files.&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>mysqldump -u $MYSQL_USER -h $MYSQL_SERVER -p$MYSQL_PASS --all-databases >
+</span><span class='line'>"$NOW-Databases.sql"
+</span><span class='line'>tar cfz "$DESTFILE" $BACKUP_SRC "$NOW-Databases.sql"&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>dropboxUpload "$DESTFILE" "$DROPBOX_DIR"&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>rm -f "$NOW-Databases.sql" "$DESTFILE"&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>完了大伙可以把这个加到crontab去，设定一个更新的循环时间就行。我的情况是，直接加在我邮件发送博客的批处理命令后，一旦邮件更新后，便自动打包上传了。很方便。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[更换服务器后的Octopress设置]]></title>
+    <link href="http://linpengxuan.github.com/newwebsite/blog/2012/03/18/renew-setting-for-octopress/"/>
+    <updated>2012-03-18T18:02:46+08:00</updated>
+    <id>http://linpengxuan.github.com/newwebsite/blog/2012/03/18/renew-setting-for-octopress</id>
+    <content type="html"><![CDATA[<p>每隔一段时间，我总会有些东西跳出来。事情是这样的，公司里面有道防火墙，屏蔽了Gmail。If there are something to be
+got rid of my computer, I am quite positive the services from google would
+the last one on my list. 于是我就用了翻墙软件来上Gmail，很讽刺，是吗？在肉身翻墙之后。。。</p>
+
+<p>之前购买的VPS服务也许是因为我设置的邮件发布octopress的ruby程序，一个月内服务过载警告2次。于是我开始考虑转换一个<a href="http://newwebsite.com">服务器</a>。</p>
+
+<!--more-->
+
+
+<h5>概要，目的</h5>
+
+<ol>
+<li>我想实现和现在VPS一样的功能；</li>
+<li>改善邮件发送功能。以前是使用cron定时器，每隔一定时间的运行，被动检查是否有新博客。我希望改善博客的发布功能；</li>
+<li>VPN，SSH功能正常。</li>
+</ol>
+
+
+<h4>服务器设置</h4>
+
+<p>我从<a href="http://blog.s135.com/pptp_vpn/">这儿</a>可以设置好在CentOS上的VPN。</p>
+
+<p>然后设置LNMP，因为我有了512MB的内存。</p>
+
+<p>设置好新服务器的rvm环境和ruby。
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>安装git&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>yum install zlib-devel openssl-devel perl cpio
+</span><span class='line'>expat-devel gettext-devel autoconf
+</span><span class='line'>wget
+</span><span class='line'>http://www.codemonkey.org.uk/projects/git-snapshots/git/git-latest.tar.gz
+</span><span class='line'>tar xzvf git-latest.tar.gz
+</span><span class='line'>cd git-{date}   #进入git的文件夹
+</span><span class='line'>autoconf
+</span><span class='line'>./configure --with-curl=/usr/local
+</span><span class='line'>make &amp; make install&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>安装RVM&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>yum install git git-core git-gui git-doc curl gcc build-essential
+</span><span class='line'>groupadd rvm
+</span><span class='line'>useradd -g rvm rvm
+</span><span class='line'>usermod -a -G rvm root
+</span><span class='line'>bash &lt; &lt;(curl -Lk
+</span><span class='line'>https://github.com/wayneeseguin/rvm/raw/1.3.0/contrib/install-system-wide)
+</span><span class='line'>echo '[[ -s "/usr/local/rvm/scripts/rvm" ]] &amp;&amp; .
+</span><span class='line'>"/usr/local/rvm/scripts/rvm"' >> ~/.bash_profile
+</span><span class='line'>source ~/.bash_profile
+</span><span class='line'>rvm pkg install zlib openssl libcurl4-openssl-dev libssl-dev zlib1g-dev
+</span><span class='line'>libreadline5-dev
+</span><span class='line'>rvm install 1.9.2 -C --with-openssl-dir=$HOME/.rvm/usr
+</span><span class='line'>rvm --default use 1.9.2
+</span><span class='line'>gem install bundle&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>继续octopress的配置,从github上恢复&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>cd /home/wwwroot
+</span><span class='line'>mkdir blog
+</span><span class='line'>cd blog
+</span><span class='line'>git init
+</span><span class='line'>git remote add origin.old git://github.com/linpengxuan/blog.git
+</span><span class='line'>git pull origin.old master
+</span><span class='line'>git remote add origin git@github.com:linpengxuan/xinboke.git ＃需要新建
+</span><span class='line'>git remote add live /home/wwwroot/octopress_blog.git; git pull live master;
+</span><span class='line'>git add .;git commit -m "aa";git push origin master&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>设置VPS端的另一个octopress环境，用于自动rake generate&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>cd /home/wwwroot
+</span><span class='line'>mkdir octopress_blog.git &amp;&amp; cd octopress_blog.git
+</span><span class='line'>git init --bare
+</span><span class='line'>git config core.bare false
+</span><span class='line'>git config core.worktree /home/wwwroot/blog
+</span><span class='line'>git config receive.denycurrentbranch ignore
+</span><span class='line'>vi hooks/post-receive
+</span><span class='line'>/bin/sh
+</span><span class='line'>GIT_WORK_TREE=/home/wwwroot/blog git checkout -f
+</span><span class='line'>cd /home/wwwroot/blog
+</span><span class='line'>bundle exec rake generate
+</span><span class='line'>chmod 755 hooks/post-receive
+</span><span class='line'>cd /home/wwwroot/blog
+</span><span class='line'>git remote add live /home/wwwroot/octopress_blog.git&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>设置jekyllmail&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>cd /home/wwwroot
+</span><span class='line'>mkdir jekyllmail;cd jekyllmail
+</span><span class='line'>git init
+</span><span class='line'>git remote add origin.old git:github.com/linpengxuan/JekyllMail.git&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>设置脚本文件,设置根目录夹上aa.sh,内容如下&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>/bin/sh
+</span><span class='line'>cd /home/wwwroot/jekyllmail
+</span><span class='line'>export LC_CTYPE=en_US.UTF-8
+</span><span class='line'>export LANG=en_US.UTF-8
+</span><span class='line'>ruby jekyllmail.rb
+</span><span class='line'>cd /home/wwwroot/blog
+</span><span class='line'>git add .
+</span><span class='line'>git commit -m "aa"
+</span><span class='line'>git push live master&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h4>实际操作</h4>
+
+<p>每当我需要更新博文的时候，用邮件发送博文后，我会登录服务器运行<code>./aa.sh</code>,然后在有博文时，会自动<code>rake
+generate</code>；在没有博文时，就保持原样。</p>
+]]></content>
+  </entry>
+  
+</feed>
