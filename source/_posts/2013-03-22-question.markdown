@@ -1,0 +1,16 @@
+---
+title: 'question'
+date: 2013-03-22 20:51:15
+author: linpx
+categories: life xp
+comments: true
+layout: post
+markup: markdown
+published: true
+title: 小疑问
+---
+一年多以后，再次回到厦门。吃上母亲做的饭，果然亲切。
+
+问题是，如果愿意计算还能吃多少回这样的饭，按照现在回家的速度，是不是也就20次?
+
+果然如佛祖所说的，人来到这世上就是受苦的。
