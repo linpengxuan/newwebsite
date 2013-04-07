@@ -9,7 +9,7 @@ markup: markdown
 published: true
 title: 突然跳出的想法
 ---
-看书看到一半，突然想到纸牌屋里的女主[Robin White](
+看书看到一半，突然想到纸牌屋里的女主[Robin Wright](
 http://en.wikipedia.org/wiki/Robin_Wright_Penn)。
 她有个优点，排除剧中带来的各种评价：如果早上没法跑步了，那么晚上无论多迟都要找机会出去跑一下，即使有时候要穿过墓地。
 
