@@ -1,0 +1,20 @@
+---
+title: 'period'
+date: 2013-04-27 19:18:24
+author: linpx
+categories: life xp
+comments: true
+layout: post
+markup: markdown
+published: true
+title: 告一小段落
+---
+最近这个月活生生的折腾，让我投入考试复习的时间明显不足。是的，我仍在考试。
+
+一切似乎都在向好的方向发展，转回国内发展的平台也挺好。
+
+是有人说过，如果6个月没有工作，那么再就业的概率就明显降低。我还是很积极地在国内寻找工作的吧，我应该不算消极就业者吧。
+
+再努力努力，加把劲就成。
+
+`thy will be done on earth as it is on heaven.`
