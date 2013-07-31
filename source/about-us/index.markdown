@@ -5,6 +5,10 @@ comments: false
 sharing: false
 footer: false
 ---
+* After a short staying in Beijing, we decided to move to Shanghai. We have never worked here before even though I spent 4 years for a degree in this city a decade ago. We love the weather here apparently, the friends to meet and the good working conditions. At least 3 more years, I would say.
+
+---updated on Jul., 2013---
+
 *	We married on March 19, 2011.
 *	We are now living in Seoul. We might move to somewhere else in future.
 *	We always want to experience something new. The world is too big to explore, yet we are running out of time.
