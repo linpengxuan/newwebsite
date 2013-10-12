@@ -1,0 +1,12 @@
+---
+title: 'test'
+date: 2013-10-12 14:22:58
+author: linpx
+categories: life xp exam
+comments: true
+layout: post
+markup: markdown
+published: true
+title: 民
+---
+test
