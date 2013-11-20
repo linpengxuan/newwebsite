@@ -2,7 +2,7 @@
 title: 'a serendipity'
 date: 2013-11-20 00:23:02
 author: linpx
-categories: life xp computer
+categories: life xp btc
 comments: true
 layout: post
 markup: markdown

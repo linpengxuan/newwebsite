@@ -1,5 +1,5 @@
 ---
-title: 'happy lin's birthday'
+title: 'happy lins birthday'
 date: 2013-11-14 12:40:03
 author: sourrabbit
 categories: life xp
