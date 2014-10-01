@@ -1,6 +1,6 @@
 ---
 author: linpx
-date: '2004-12-23 13:45:23'
+date: 2004-12-23 13:45:23
 layout: post
 slug: merry-christmas-to-myself
 status: publish
