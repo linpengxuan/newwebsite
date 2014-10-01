@@ -1,6 +1,6 @@
 ---
 author: linpx
-date: '2004-12-08 11:12:16'
+date: 2004-12-08 11:12:16
 layout: post
 slug: belief-in-heart
 status: publish
