@@ -1,6 +1,6 @@
 ---
 author: linpx
-date: '2004-12-03 13:39:26'
+date: 2004-12-03 13:39:26
 layout: post
 slug: bar-exam
 status: publish
