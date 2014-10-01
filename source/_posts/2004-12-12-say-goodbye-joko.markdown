@@ -1,6 +1,6 @@
 ---
 author: linpx
-date: '2004-12-12 11:57:02'
+date: 2004-12-12 11:57:02
 layout: post
 slug: say-goodbye-joko
 status: publish
