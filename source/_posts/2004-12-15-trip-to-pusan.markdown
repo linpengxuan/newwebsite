@@ -1,6 +1,6 @@
 ---
 author: linpx
-date: '2004-12-15 02:56:46'
+date: 2004-12-15 02:56:46
 layout: post
 slug: trip-to-pusan
 status: publish
