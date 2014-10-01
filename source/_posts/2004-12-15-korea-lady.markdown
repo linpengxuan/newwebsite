@@ -1,6 +1,6 @@
 ---
 author: linpx
-date: '2004-12-15 02:53:13'
+date: 2004-12-15 02:53:13
 layout: post
 slug: korea-lady
 status: publish
