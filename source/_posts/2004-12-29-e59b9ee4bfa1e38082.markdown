@@ -1,6 +1,6 @@
 ---
 author: linpx
-date: '2004-12-29 14:53:18'
+date: 2004-12-29 14:53:18
 layout: post
 slug: '%e5%9b%9e%e4%bf%a1%e3%80%82'
 status: publish
