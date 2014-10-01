@@ -1,6 +1,6 @@
 ---
 author: linpx
-date: '2004-12-03 12:21:20'
+date: 2004-12-03 12:21:20
 layout: post
 slug: goals-in-2-years
 status: publish
